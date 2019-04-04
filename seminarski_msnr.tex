@@ -1,0 +1,315 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass[a4paper]{article}
+
+\usepackage{color}
+\usepackage{url}
+\usepackage[T2A]{fontenc} % enable Cyrillic fonts
+\usepackage[utf8]{inputenc} % make weird characters work
+\usepackage{graphicx}
+
+\usepackage[english,serbian]{babel}
+
+\usepackage[unicode]{hyperref}
+\hypersetup{colorlinks,citecolor=green,filecolor=green,linkcolor=blue,urlcolor=blue}
+
+\usepackage{listings,xcolor, realboxes}
+
+\newtheorem{primer}{Primer}[section]
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.8,0.8,0.8}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ 
+  backgroundcolor=\color{mygray},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\scriptsize\ttfamily,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  firstnumber=1,                % start line enumeration with line 1
+  frame=lines,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Perl,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+\begin{document}
+
+\title{Naslov seminarskog rada\\ \small{Seminarski rad u okviru kursa\\Metodologija stručnog i naučnog rada\\ Matematički fakultet}}
+
+\author{Prvi autor, drugi autor, treći autor, četvrti autor\\ kontakt email prvog, drugog, trećeg, četvrtog autora}
+
+%\date{9.~april 2015.}
+
+\maketitle
+
+\abstract{
+U ovom tekstu je ukratko prikazana osnovna forma seminarskog rada. Obratite pažnju da je pored ove .pdf datoteke, u prilogu i odgovarajuća .tex datoteka, kao i .bib datoteka korišćena za generisanje literature. Na prvoj strani seminarskog rada su naslov, apstrakt i sadržaj, i to sve mora da stane na prvu stranu! Kako bi Vaš seminarski zadovoljio standarde i očekivanja, koristite uputstva i materijale sa predavanja na temu pisanja seminarskih radova. Ovo je samo šablon koji se odnosi na fizički izgled seminarskog rada (šablon koji \emph{morate} da koristite!) kao i par tehničkih pomoćnih uputstava. Pročitajte tekst pažljivo jer on sadrži i važne informacije vezane za zahteve obima i karakteristika seminarskog rada.}
+
+\tableofcontents
+
+\newpage
+
+\section{Osnovne osobine}
+\label{sec:osobine}
+
+Prvobitna zamisao autora Perl-a, Lerija Vola, bila je da napravi alat koji bi na brz i lak način omogućio napredno rukovanje proizvoljnim tekstualnim datotekama. Jezik je osmišljen sa idejom da se veći značaj prida njegovoj praktičnosti(lakoća korišćenja, efikasnost, kompletnost) nego lepoti(minimalnost, elegancija). Autor smatra da je implementacijom Perla uspeo da izdvoji i iskoristi najbolje funkcionalnosti jezika C, awk, sed i sh\cite{wallperl}. Sintaksa je usko povezana sa sintaksom C-a. Umesto da, kao većina Unix alata, ograničava memoriju, Perl je sposoban da čitav fajl učita kao jednu nisku(ukoliko je dovoljno memorije raspoloživo). Dubina rekurzije takođe nije organičena. Pažljivo osmišljeni mehanizmi poklapanja obrazaca (eng.~{\em pattern matching}) programeru pružaju veoma moćan alat za brzo čitanje velikih datoteka.
+Osim za obradu teksta, Perl je tokom godina postao odličan alat za obavljanje raznih sistemskih zadataka, veb programiranje, grafičko programiranje, pristup bazama podataka, mrežno programiranje i mnoge druge zadatke. \\ 
+
+Bitno je još i naglasiti da je Perl interpretirani jezik što omogućava prenosivost jednom napisanih kodova na veliki broj različitih platformi\footnote{Kompletan spisak podržanih platformi može se naći na sledećoj \href{https://perldoc.perl.org/perlport.html#Supported-Platforms}{adresi.}}. Za razliku od strogo (eng.~{\em strictly}) interpretiranih jezika, Perl program se najpre prevodi na bajt-k\^{o}d (eng.~{\em bytecode}) i nakon toga se izvršava (više reči o korišćenju Perl interpretatora u 
+%TODO: dodati referencu na poglavlje o pokretanju programa \ref{:}. 
+
+\subsection{Tipovi podataka}
+
+Postoji tri tipa ugrađenih podataka: skalari, nizovi skalara i asocijativni nizovi skalara, poznati i kao heševi (eng.~{\em hashes}). Obični nizovi su uređeni i indeksirani brojevima počevši od nule, dok su heševi neuređene kolekcije skalarnih vrednosti indeksirane dodeljenim niskama (ključevima). Skalarne vrednosti mogu biti brojevi, niske i reference uz mogućnost lake i transparentne konverzije između ove tri varijante\footnote{Iako skalar ne može neposredno sadržati više od jedne vrednosti, moguće je dodeliti mu referencu na niz vrednosti.}. Činjenica da Perl dinamički alocira memoriju omogućava pisanje programa otpornih na greške programera poput prekoračenja bafera ili pristupa nedozvoljenoj memoriji. Interpretacija operatora i vrednosti ponekad zavisi od okolnog konteksta. Postoje dva osnovna konteksta: kontekst liste i kontekst skalara.\cite{perldoc}
+\begin{primer}
+U narednom primeru videćemo da se ista promenljiva može tumačiti na dva različita načina u zavisnosti od konteksta. 
+\end{primer}
+%TODO: popravi latinicu u okviru komentara
+\begin{lstlisting}[caption={Različiti konteksti}, frame=single, label = kontekst]
+my @niz = ('Zdravo ', 'svete ', ':D!')    
+
+# @niz se tumaci u kontekstu liste:
+# promenljiva @elementi sadrzi kopiju vrednosti promenljive @niz
+my @elementi = @niz        
+
+# @niz se tumaci u kontekstu skalara:
+# promenljva $broj_elemenata sadrzi broj elemenata promenljive @niz
+my $broj_elemenata = @niz
+\end{lstlisting} 
+
+
+
+\section{Podržane paradigme}
+
+Izjava Lerija Vola da ''Perl nema nikakvu agendu, osim da bude maksimalno korisan maksimalnom broju ljudi.''\cite{walltalk} oslikava težnju Perla da bude što opštiji jezik. Ta tvrdnja je potkrepljena i time što su podržane proceduralna, funkcionalna i objektno-orijentisana paradigma. 
+
+\subsection{Proceduralna paradigma}
+%TODO: popraviti drugu referencu
+Kao što je već pomenuto u prethodnim poglavljima \ref{sec:osobine} i \ref{sec:osobine}, uticaj alata awk, sed i programskog jezika C je primetan u Perlu pa se proceduralni način pisanja programa prirodno nameće. Više primera se može naći u poglavlju \ref{sec:naslov1}.
+
+\subsection{Funkcionalna paradigma}
+
+Perl je jezik višeg reda (eng.~{\em higher-order}) koji implementira koncept dinamičkog pravljenja funkcija i prosleđivanja istih drugim funkcijama. Dovoljno je moćan da $\lambda$ račun izrazi direktno, u samom jeziku, bez potrebe za pisanjem posebnog programa za parsiranje i evaluaciju izraza\cite{Liang:2004:PLC:1060081.1060106,comparing}. Funkciju sa parametrom x i telom B, $\lambda_x.B$ u Perlu možemo predstaviti kao \Colorbox{mygray}{\lstinline!sub { my $x = shift; B }!}. Primena funkcije P na funkciju Q u lambda računu je jednostavno $(P Q)$, dok je ekvivalentan zapis u Perlu \Colorbox{mygray}{\lstinline!$P->($Q)!}.
+
+U sledećem primeru se vidi kako se može napraviti funkcija koja primenjuje prosleđenu funkciju na neki niz element po element.
+
+\begin{lstlisting}[caption={Funkcija mapiranja}, frame=single, label = mapfun]
+sub mapfunkcija{
+        my (@rez_lista);
+        my ($funkcija, @lista) = @_;
+        for (my $i=0;$i<=$#list;$i++)
+        {
+                $rez_lista[$i] = $funkcija->($lista[$i]);
+        }
+
+        return @rez_lista;
+};
+
+my @niz = (65, -42, -92);
+my $mapme = sub {
+        my $x = $_[0];
+        return $x + 42;
+};
+
+my @rezultat = mapfun ($mapme, @niz);
+
+\end{lstlisting}
+
+Nakon izvršavanja ovog k\^{o}da, u promenljivoj \Colorbox{mygray}{\lstinline!@rezultat!} se nalaze brojevi 107, 0 i -50. 
+
+
+\subsection{Objektno-orijentisana paradigma}
+
+Iako Perl nije objektno-orijentisan jezik, može instancirati i manipulisati objektima. Klase su predstavljene paketima, koji moraju posedovati \Colorbox{mygray}{\lstinline!new!} podrutinu da bi se mogli instancirati. Objekat neke klase se može predstaviti uz pomoć niza ili heša. Enkapsulacija se postiže izdvajanjem interfejsa u pakete. Mehanizam za postizanje polimorfizma je korišćenje ključne reči \Colorbox{mygray}{\lstinline!bless!}. Ova ključna reč običnu referencu na strukturu podataka označava kao pripadnika nekom paketu i time proširuje mogućnosti te strukture. Nasleđivanje se ostvaruje pomoću specijalnog niza \Colorbox{mygray}{\lstinline!@ISA!}. Ovaj niz čuva spisak imena modula koji se nasleđuju. U narednom primeru biće prikazani neki od ovih koncepata.
+
+\begin{lstlisting}[caption={Objektno orijentisana paradigma u Perlu}, frame=single, label = objPerl]
+package Student;    
+sub new{            # podrutina za instanciranje klase
+    my ($ime, $indeks, $prosek) = @_;
+    my $ref_stud = {
+        "ime"    =>    $ime,
+        "indeks" => $indeks,
+        "prosek" => $prosek,
+    };
+    bless $ref_stud, 'Student'; # objekat se proglasava instancom klase Student
+    return $ref_stud;
+}
+
+# doseg prethodne klase je ili do kraja datoteke, ili do sledece package kljucne reci
+
+package Profesor;
+sub new{            # podrutina za instanciranje klase
+    my ($ime, $plata, $fakultet) = @_;
+    my $ref_prof = {
+        "ime"       =>      $ime,
+        "plata      =>    $plata,
+        "fakultet"  => $fakultet,
+    };
+    bless $ref_prof, 'Profesor'; # objekat se proglasava instancom klase Profesor
+    return $ref_prof;
+}
+
+# instanciranje objekata klase Student i Profesor
+$laza_lazic = Student::new('Laza Lazic', 123456, 9.0);
+$mika_mikic = Profesor::new('Mika Mikic', 100000, 'Matematicki fakultet');
+
+\end{lstlisting}
+
+Svi ovi, pa i mnogi drugi koncepti su temeljnije obrađeni u \cite{Srinivasan:1997:APP:549810}.
+
+\section{Najpoznatija okruženja i njihove karakteristike}
+
+Perl je stekao veliku popularnost u ranim danima veba i često se opisuje kao ``lepljiva traka koja drži internet''. Stoga će u ovom poglavlju biti opisana dva okruženja za razvoj veb aplikacija uz dodatak već pomenutog Moose okruženja namenjenog da olakša upotrebu Perla u objektno orijentisanom stilu. 
+
+\subsection{Catalyst}
+
+Catalyst je jedno od najrasprostranjenijih Perl okruženja za razvoj veb aplikacija zasnovano na MVC (eng.~{\em Model View Controller}) arhitekturi. Ovo okruženje pruža nivo apstrakcije nad uobičajenim ciklusom zahteva i odgovora. Zahtevi omogućavaju lako gledanje argumenata nadolazećih upita, POST podataka, otpremanje datoteka i zaglavlja dok odgovori pružaju mogućnost postavljanja zaglavlja i vraćanju izlaza klijentu. 
+
+\subsection{Dancer}
+
+Dancer je okvir za pisanje veb aplikacija veoma intuitivne i izražajne sintakse. Modelovan je po uzoru na Ruby radni okvir, Sinatra. Aplikacije se grade navođenjem HTTP glagola, URL-ova (putanja) i metoda za obradu saobraćaja ka tim konkretnim URL-ovima. 
+
+\begin{lstlisting}[caption={Osnovna sintaksa Dancer okruženja}, frame=single, label = dancer]
+use Dancer2;
+# HTTP glagol GET nakon cega sledi koreni URL '\'
+# i na kraju anonimna podrutina koja vraca nisku
+get '/' => sub { 
+  return 'Zdravo svete!';
+};
+ 
+start;
+
+# Ukoliko bi se ovaj primer pokrenuo na racunaru, niska 'Zdravo svete!' bi se odstampala kada se veb pregledac uputi na adresu http://localhost:3000 
+
+\end{lstlisting}
+
+\subsection{Moose}
+
+Iako Perl ima podršku za objektno orijentisanu paradigmu, Moose pokušava da pisanje OO programa učini još lakšim i da programerima pruži jednostavnu deklarativnu sintaksu koja bi eliminisala potrebu za pisanjem konstruktora, destruktora i pristupnih metoda. U pozadini se i dalje dešava nešto slično onome opisanom u \href{sec:osobine}, ali je programer zaštićen od tih detalja implementacije i pruža mu se veći stepen apstrakcije.
+
+\begin{lstlisting}[caption={Moose klase}, frame=single, label = moose]
+package Student;
+# nakon navodjenja sledece linije, paket postaje klasa
+use Moose;
+
+has 'ime' => (
+    is => 'rw',     # pristupna funkcija koja moze da cita i upisuje vrednosti u atribut ime
+    isa => 'Str',   # naglasavamo da atribut ime moze da prima samo niske
+);
+
+has 'neki_atribut' => (...)
+
+# instanciranje objekta
+use Student;
+my student = Student->new(
+    ime => 'mika mikic',
+    neki_atribut => 'neka vrednost',
+    ...
+);
+
+\end{lstlisting}
+%TODO                                         \ref{:}.
+%Bez ulaženja u previše detalja i teoriju regularnih izraza, može se reći da su regularni izrazi niske sa specifičnom sintaksom i semantikom\footnote{Za temeljnije upoznavanje sa ovom tematikom, preporučuju se \cite{Aho:1992:FCS:114768,unixRegex, regexInfo}.}. Poklapanje obrazaca se odnosi na utvrđivanje da li proizvoljna niska poseduje odgovarajuće karakteristike opisane obrascem(regularnim izrazom) na osnovu kog se vrši poklapanje. Ovde će ukratko biti navedena sintaksa i primeri korišćenja regularnih izraza u Perlu. Iako se navedena pravila odnose na konkretno na Perl, osnovni koncepti se mogu primeniti i u mnogim drugim jezicima\cite{pcre}. \\
+
+%Poklapanje se najčešće vrši pomoću operatora \lstinline{=~} i \lstinline{!~} i obrasca kao u primeru \ref{obrazac1} \begin{lstlisting}[caption={Jednostavno poklapanje}, frame=single, label = obrazac1]
+%my $prom = "neki tekst"
+
+%$prom =~ m/neki tekst/
+%$prom =~ m/nekitekst/
+%$prom =~ m!i t!
+%$prom =~ m!?i t?
+%$prom =~ /i t/
+%$prom !~ m[nki]
+%\end{lstlisting}
+%Navedeni isečak k\^{o}da proverava da li promenljiva \lstinline{$prom} sadrži karaktere navedene između '/'. Prva linija će uspešno poklopiti obrazac jer se sadržaj \lstinline{$prom} u potpunosti slaže sa tekstom između kosih crta. Druga linija ne uspeva da poklopi obrazac jer se u promenljivoj javlja karakter ' ' koji se tretira na isti način kao i ostali karakteri. Treća linija ispituje da li se podniska "i t" javlja u \lstinline{$prom} i pošto to jeste slučaj, uspešno poklapa obrazac. Poslednja linija će vratiti vrednost "tačno" (eng.~{\em true}) ukoliko se podniska "nki" \textbf{ne} nalazi u promenljivoj. Primetimo da nakon navođenja karaktera 'm' možemo koristiti proizvoljne separatore, tako da su izrazi \lstinline{m!i t!}, \lstinline{m?i t?} i \lstinline{/i t/} ekvivalentni. 
+%Bitno je da znamo da postoje karakteri koji imaju posebno značenje i ne mogu se direktno koristiti u regularnim izrazima. To su \Colorbox{mygray}{\verb!{}[]()^$.|*+?-\!} i \Colorbox{mygray}{\verb|!|}. Da bismo mogli direktno da poklapamo sa nekim od ovih karaktera, moramo navesti \Colorbox{mygray}{\verb!\!} pre svakog:
+%\begin{lstlisting}[caption={Korišćenje specijalnih karaktera}, frame=single, label = obrazac2]
+%"3 je broj!" =~ /!/     # nema poklapanja jer je ! specijalan karakter
+%"3 je broj!" =~ /\!/    # poklapanje je uspesno
+%\end{lstlisting}
+
+%U svim dosadašnjim primerima nije bitno mesto u okviru niske na kome je došlo do poklapanja. U nekim slučajevima programer želi da naglasi \textbf{gde} bi regularan izraz trebalo da se poklopi. U tu svrhu koriste se karakteri usidrenja (eng.~{\em anchor}) \Colorbox{mygray}{\verb!^!} I \Colorbox{mygray}{\verb!$!}. Prvi karakter odgovara poklapanju na početku niske, a drugi na kraju.
+%\begin{lstlisting}[caption={Karakteri usidrenja}, frame=single, label = obrazac3]
+
+%\end{lstlisting}
+
+%paradigme
+
+
+
+%\begin{verbatim}
+%\usepackage{graphicx}
+%\end{verbatim}
+
+%\begin{figure}[h!]
+%\begin{center}
+%\includegraphics[scale=0.75]{panda.jpg}
+%\end{center}
+%\caption{Pande}
+%\label{fig:pande}
+%\end{figure}
+
+%Na svaku sliku neophodno je referisati se negde u tekstu. Na primer, na slici %\ref{fig:pande} prikazane su pande. 
+
+
+%\begin{primer} I tabele treba da budu u svom okruženju, i na njih je neophodno referisati se u tekstu. Na primer, u tabeli \ref{tab:tabela1} su prikazana različita poravnanja u tabelama.
+
+%\begin{table}[h!]
+%\begin{center}
+%\caption{Razlčita poravnanja u okviru iste tabele ne treba %koristiti jer su nepregledna.}
+%\begin{tabular}{|c|l|r|} \hline
+%centralno poravnanje& levo poravnanje& desno poravnanje\\ %\hline
+%a &b&c\\ \hline
+%d &e&f\\ \hline
+%\end{tabular}
+%\label{tab:tabela1}
+%\end{center}
+%\end{table}
+%
+%\end{primer}
+
+%\section{K\^{o}d i paket listings}
+%Za ubacivanje koda koristite paket \textbf{listings}:
+%\url{https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings}
+
+%\begin{primer}
+%Primer ubacivanja koda za programski jezik Python dat je kroz listing \ref{simple}. Za neki drugi programski jezik, treba podesiti odgvarajući programski jezik u okviru defnisanja stila.
+%\end{primer}
+%\begin{lstlisting}[caption={Primer ubacivanja koda u tekst},frame=single, label=simple]
+%# This program adds up integers in the command line
+%import sys
+%try:
+%    total = sum(int(arg) for arg in sys.argv[1:])
+%    print 'sum =', total
+%except ValueError:
+%    print 'Please supply integer arguments'
+%\end{lstlisting}
+
+\addcontentsline{toc}{section}{Literatura}
+\appendix
+\bibliography{seminarski} 
+\bibliographystyle{plain}
+
+\appendix
+
+
+
+\end{document}
+ 
