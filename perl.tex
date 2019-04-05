@@ -62,9 +62,11 @@ Da bismo instalirali Perl kompajler na Linux operativnom sistemu potrebno je da 
 Pokretanje Perl skripta na Linux operativnom sistemu se radi na jednostavan na\v cin. Potrebno je otvoriti terminal, a zatim uneti komandu perl <putanja\_do\_fajla>. Ova komanda \'ce pokrenuti izvr\v savanje skripta.
 
 \subsection{Instairanje na Windows operativnom sistemu}
-Pre instalacije na Windows operativnom sistemu po\v zeljno je  prethodno proveriti da nijedna verzija Perla ve\'c nije instalirana. Ako \v zelite da deinstalirate prethodnu verziju idite na Control Panel - Add/Remove programs. Ako i dalje imate C:\textbackslash Strawberry folder, izbri\v site ga ili ga preimenujte. Skinite i instalirajte Padre, the Perl IDE/editor. Strawberry Perl je deo instalacije, ali tako\dj{}e dobijate i mnoge druge korisne CPAN module. Nakon instalacije, mo\v zda \'cete morati da restartujete ra\v cunar. Zatim idite na Start meni/All Programs i prona\dj{}ite folder sa Perlom. U njemu kliknite na Perl komandnu liniju.  Da biste instalirali module iz CPAN-a u komandnoj liniji ukucajte komandu cpan App::cpanminus. Ukoliko \v zeite da  potvrdite da je instalacija uspe\v sna ukucajte perl -v, ovom komandom, tako\dj{}e, mo\v zete proveriti koja je verzija perl-a instalirana.
+Pre instalacije na Windows operativnom sistemu po\v zeljno je  prethodno proveriti da nijedna verzija Perla ve\'c nije instalirana. Ako \v zelite da deinstalirate prethodnu verziju idite na Control Panel - Add/Remove programs. Ako i dalje imate C:\textbackslash Strawberry folder, izbri\v site ga ili ga preimenujte. Skinite i instalirajte Padre, the Perl IDE/editor\cite{padre}. Strawberry Perl\cite{strawberry} je deo instalacije, ali tako\dj{}e dobijate i mnoge druge korisne CPAN module. Nakon instalacije, mo\v zda \'cete morati da restartujete ra\v cunar. Zatim idite na Start meni/All Programs i prona\dj{}ite folder sa Perlom. U njemu kliknite na Perl komandnu liniju.  Da biste instalirali module iz CPAN-a u komandnoj liniji ukucajte komandu cpan App::cpanminus. Ukoliko \v zeite da  potvrdite da je instalacija uspe\v sna ukucajte perl -v, ovom komandom, tako\dj{}e, mo\v zete proveriti koja je verzija perl-a instalirana.
 
 \subsection{Pokretanje na Windowsu}
+Ako imamo instaliran Padre, the Perl IDE/editor, komande za pokretanje programa mo\v zemo zadati i iz editora. U meniju izaberemo Run, a zatim Run Script, mada mo\v zemo da pritisnemo taster F5 i skript \'ce biti pokrenut.
+Ako \v zelimo, skript mo\v zemo pokrenuti i iz komandne linije tako \v sto ukucamo perl <putanja\_do\_fajla>.
 
 \section{Primeri koda}
 U listingu \ref{hello} dat je primer ispisa Hello world programa. Komentare pi\v semo iza tarabe. Tekst mo\v zemo ispisati tako \v sto ga navedemo iza navodnika ili koriste\'ci funkciju qq.
@@ -109,7 +111,7 @@ Mo\v zemo zadavati i argumente komandne linije. Argumentima komandne linije pris
 $br_arg = $#ARGV + 1;
 print "Broj argumenata komandne linije je $br_arg, a to su @ARGV\n";
 \end{lstlisting}
-Slede\'cim kodom je prikazan primer kori\v s\'cenja while petlje. Program prihvata argumente sa ulaza i ispisuje ih na ekran. Klju\v cna re\v c my ozna\v cava da je domen promenljive samo taj blok. Promenljiva \$in u while petlji nema uticaj na promenljivu sa istim nazivom van petlje.
+Slede\'cim kodom je prikazan primer kori\v s\'cenja while petlje. Program prihvata argumente sa ulaza i ispisuje ih na ekran. Klju\v cna re\v c my\cite{my} ozna\v cava da je domen promenljive samo taj blok. Promenljiva \$in u while petlji nema uticaj na promenljivu sa istim nazivom van petlje.
 \begin{lstlisting}[caption={Unos i ispis elemenata u while petlji}, frame=single, label=while]
 $in = 5;
 
@@ -156,4 +158,9 @@ print "$aa $bb\n";
 \end{lstlisting}
 
 \end{primer}
+
+\bibliography{instalacija.bib}
+\bibliographystyle{abbrv}
+
+
 \end{document}
