@@ -55,7 +55,7 @@
 
 \begin{document}
 
-\title{Perl - smisliti ovde\\ \small{Seminarski rad u okviru kursa\\Metodologija stručnog i naučnog rada\\ Matematički fakultet}}
+\title{Perl - sjajno re\v senje za analiti\v cke probleme\\ \small{Seminarski rad u okviru kursa\\Metodologija stručnog i naučnog rada\\ Matematički fakultet}}
 
 \author{Aleksandar Vračarević, Jovan Marić,\\ Petar Mićić, Tatjana Radovanović\\ vracarevicaleksandar@gmail.com, maric993@hotmail.com,\\ micicpetar73@gmail.com, tatjana.tasa.95@gmail.com}
 
@@ -136,7 +136,7 @@ Sredinom poslednje decenije dvadesetog veka Yukihiro Matsumoto želi da objedini
 \section{Osnovna namena, svrhe i mogu\'cnosti}
 \label{sec:namena}
 
-Glavna snaga Perla ogleda se u radu sa regularnim izrazima. Tri glavne operacije su uparivanje (eng. matching), zamena uparene niske drugom i prevođenje koje menja karaktere iz liste sa odgovarajućim karakterima iz liste zamena.\cite{id} Postoje brojne modifikacije regex operatora koje olakšavaju korišćenje i pružaju veliki broj opcija programeru. Na usluzi programeru nalaze se i četiri promenljive u kojima se čuvaju rezulatati poslednjeg uparivanja. Imamo pristup sledećim informacijama: da li je došlo do uparivanja, uparenu nisku, nisku pre uparene i nisku posle\cite{friedl2006mastering}. Kada drugi programski jezici predstavljaju svoje mogućnosti vezane za parsiranje teksta i regularne izraze uglavnom to čine poredeći se upravo sa Perlom.\\
+Glavna snaga Perla ogleda se u radu sa regularnim izrazima. Tri glavne operacije su uparivanje (eng. matching), zamena uparene niske drugom i prevođenje koje menja karaktere iz liste sa odgovarajućim karakterima iz liste zamena\cite{id}. Postoje brojne modifikacije regex operatora koje olakšavaju korišćenje i pružaju veliki broj opcija programeru. Na usluzi programeru nalaze se i četiri promenljive u kojima se čuvaju rezulatati poslednjeg uparivanja. Imamo pristup sledećim informacijama: da li je došlo do uparivanja, uparenu nisku, nisku pre uparene i nisku posle\cite{friedl2006mastering}. Kada drugi programski jezici predstavljaju svoje mogućnosti vezane za parsiranje teksta i regularne izraze uglavnom to čine poredeći se upravo sa Perlom.\\
 Bezbednost je jedna od najznačajnih komponenti svakog programa. Od naglog razvoja mrežnog programiranja bezbednost eksponencijalno dobija na značaju. Već smo pomenuli da Perl pronalazimo kao bekend(eng {\em back end}) skripting jezik u mrežnom programiranju. Veliki razlog za to je tejnted mod rada(eng. {\em Tainted}). Kada Perl operiše u ovom režimu rada svakom podatku koji dolazi od korisnika ili iz okruženja pokretanja, dodaje se malo meta podataka koji ukazuje da ti podaci mogu potencijalno biti problematični. U svakom trenutku u programu se mo\v ze proveriti poreklo podataka i izdvojiti siguran deo istog\cite{modern}.\\
 Kao odgovor na sve veću potražnju objektno orijentisanih jezika Perl nudi biblioteku Moose. Moose nudi osnovne mogu\'cnosti kao \v sto su pravljenje klasa, metoda, atributa ali i podržava koncepte kao sto su nasle\dj{}ivanje i preopterećivanje metoda. 
 
@@ -147,12 +147,12 @@ Prvobitna zamisao autora Perl-a, Lerija Vola, bila je da napravi alat koji bi na
 Sintaksa je usko povezana sa sintaksom C-a. Umesto da, kao većina Unix alata, ograničava memoriju, Perl je sposoban da čitav fajl učita kao jednu nisku(ukoliko je dovoljno memorije raspoloživo). Pažljivo osmišljeni mehanizmi poklapanja obrazaca (eng.~{\em pattern matching}) programeru pružaju veoma moćan alat za brzo čitanje velikih datoteka.
 Osim za obradu teksta, Perl je tokom godina postao odličan alat za obavljanje raznih sistemskih zadataka, veb programiranje, grafičko programiranje, pristup bazama podataka, mrežno programiranje i mnoge druge zadatke. \\ 
 
-Bitno je još i naglasiti da je Perl interpretirani jezik što omogućava prenosivost jednom napisanih kodova na veliki broj različitih platformi\footnote{Kompletan spisak podržanih platformi može se naći na sledećoj\href{https://perldoc.perl.org/perlport.html#Supported-Platforms}{adresi.}}. Za razliku od strogo (eng.~{\em strictly}) interpretiranih jezika, Perl program se najpre prevodi u sintaksno drvo i nakon toga se izvršava (više reči o korišćenju Perl interpretatora u 
+Bitno je još i naglasiti da je Perl interpretirani jezik što omogućava prenosivost jednom napisanih kodova na veliki broj različitih platformi\footnote{Kompletan spisak podržanih platformi može se naći na sledećoj \href{https://perldoc.perl.org/perlport.html#Supported-Platforms}{adresi.}}. Za razliku od strogo (eng.~{\em strictly}) interpretiranih jezika, Perl program se najpre prevodi u sintaksno drvo i nakon toga se izvršava (više reči o korišćenju Perl interpretatora u 
 \ref{sec:instalacija}).
 
 \subsection{Tipovi podataka}
 
-Postoji tri tipa ugrađenih podataka: skalari, nizovi skalara i asocijativni nizovi skalara, poznati i kao heševi (eng.~{\em hashes}). Obični nizovi su uređeni i indeksirani brojevima počevši od nule, dok su heševi neuređene kolekcije skalarnih vrednosti indeksirane dodeljenim niskama (ključevima). Skalarne vrednosti mogu biti brojevi, niske i reference uz mogućnost lake i transparentne konverzije između ove tri varijante\footnote{Iako skalar ne može neposredno sadržati više od jedne vrednosti, moguće je dodeliti mu referencu na niz vrednosti.}. Činjenica da Perl dinamički alocira memoriju omogućava pisanje programa otpornih na greške programera poput prekoračenja bafera ili pristupa nedozvoljenoj memoriji. Interpretacija operatora i vrednosti ponekad zavisi od okolnog konteksta. Postoje dva osnovna konteksta: kontekst liste i kontekst skalara.\cite{perldoc}
+Postoji tri tipa ugrađenih podataka: skalari, nizovi skalara i asocijativni nizovi skalara, poznati i kao heševi (eng.~{\em hashes}). Obični nizovi su uređeni i indeksirani brojevima počevši od nule, dok su heševi neuređene kolekcije skalarnih vrednosti indeksirane dodeljenim niskama (ključevima). Skalarne vrednosti mogu biti brojevi, niske i reference uz mogućnost lake i transparentne konverzije između ove tri varijante\footnote{Iako skalar ne može neposredno sadržati više od jedne vrednosti, moguće je dodeliti mu referencu na niz vrednosti.}. Činjenica da Perl dinamički alocira memoriju omogućava pisanje programa otpornih na greške programera poput prekoračenja bafera ili pristupa nedozvoljenoj memoriji. Interpretacija operatora i vrednosti ponekad zavisi od okolnog konteksta. Postoje dva osnovna konteksta: kontekst liste i kontekst skalara\cite{perldoc}.
 \begin{primer}
 U narednom primeru videćemo da se ista promenljiva može tumačiti na dva različita načina u zavisnosti od konteksta. 
 \end{primer}
@@ -169,6 +169,60 @@ my @elementi = @niz
 my $broj_elemenata = @niz
 \end{lstlisting} 
 
+\section{\v Sta je ono što izdvaja Perl?}
+
+Velika Perl Arhiva\cite{cpan} (eng. ~{\em Comprenhensive Perl Archive Network(CPAN)}) 
+ predstavlja online skladište Perl programa, dokumentacije i modula koji olakšavaju implementaciju i održavanje Perl projekata. Arhiva čuva oko 180 hiljada modula otvorenog koda napisanih od preko 12 hiljada 
+ programera.
+
+Glavni zadatak CPAN-a je da omogu\'ci programerima da prona\dj{}u module koji nisu uklju\v ceni u paket osnovnih modula. Paket osnovnih modula se dobija instalacijom Perl kompajlera. %Neki od njih su 
+Modul pod imenom CPAN.pm omogućava lako preuzimanje i instaliranje drugih Perl modula. 
+
+
+\subsection{Parsiranje tekstualnog sadržaja}
+% da je text processing language?, zbog cega je text processing language (sta je to sto omogucava procesiranje teksta), primer koda gde se parsira fajl, onaj primer sa frekvencijom reci u tekstu i da ga objasnim.
+
+Prve verzije Perl programskog jezika su u fokus stavljale obradu i manipulaciju tekstualnog sadržaja. Sama skra\'cenica PERL (Practical Extraction and Reporting Language) prikazuje osnovne namene jezika, a to su izvlačenje nekog sadržaja i generisanje izveštaja na osnovu tog sadržaja.
+
+Naredni primer prikazuje kako na jednostavan način možemo izračunati broj pojavljivanja svake reči u tekstu, pri čemu se za reč smatra niska karaktera koja se sastoji samo od malih i velikih slova abecede.
+
+\begin{lstlisting}[label=simple]
+while (my $line = <$fh>) {
+   chomp $line;
+   foreach my $str (split /^[A-Za-z]+$/, $line) {
+       $count{$str}++;
+    } 
+}
+\end{lstlisting}
+
+
+Dakle, prvo prolazimo kroz fajl (predstavlja referencu na fajl koji smo 
+prethodno otvorili) liniju po liniju, zatim iz linije uklanjamo znak za novi red, a potom za svaku reč (smeštenu u promenljivoj \$str) koja odgovara navedenom regularnom izrazu, ažuriramo strukturu u kojoj čuvamo reč i broj izračunatih pojavljivanja. Rezultat rada navedenog 
+dela koda je smešten u promenljivoj \$count \cite{cooksnd}.
+
+
+\subsection{Jednostavno korišćenje regularnih izraza}
+% da su reg izrazi "koren" parsiranja nekog teksta, i da perl pruza koriscenje regularnih izraza na elegantan nacin, sta su regularni izrazi, primer koda i da objasnim kod
+% da prikazem kako se koriste regularni izrazi u Perl programima na jednostavan nacin.
+% da je bogata podrska regularnim izrazima u Perl-u
+
+Važnu ulogu pri manipulaciji tekstualnog sadržaja igraju regularni izrazi. Regularni izrazi su šabloni koji mogu biti prepoznati u nizovima karaktera. Rezultat rada operacije prepoznavanja šablona jeste tačno ili netačno, odnosno da li niz karaktera odgovara datom šablonu ili ne. Perl ima ugradjene mehanizme koji čine rad sa regularnim izrazima lakšim, nalik na alate grep, sed i awk.\cite{sed} %ovde referenca na neki grep sed..., pitati za ovo
+
+
+
+Osnovni operatori primene regularnih izraza, koje Perl nudi, jesu $=\sim$ i $!\sim$. U izrazu \$str $=\sim$ m/regex/ se proverava da li se data niska \$str podudara sa regularnim izrazom regex. Regularni izrazi se navode izme\dj{}u dve kose crte. U slučaju da je došlo do poklapanja, izraz vraća 1, a nula inače. Operator $!\sim$ radi suprotno, u slučaju podudaranja vraća 0, a 1 inače.
+
+Postoje tri osnovne operacije sa regularnim izrazima:
+
+\begin{itemize}
+  \item Provera podudaranja - m/regex/
+  \item Zamena re\v ci - s/regex/word/
+  \item Translacija - tr/regex/word/
+\end{itemize}
+
+Zamena reči funkcioniše tako što se sva podudaranja regularnog izraza u nisci zamene navedenom niskom. Na primer u izrazu "Volim mačke!" =~ s/mačke/pse, deo niske mačke \' ce biti zamenjen sa pse, i novodobijena niska predstavlja rezultat izraza.
+
+Translacija je slična zameni reči, sa tim što ne koristi regularne izraze prilikom pretrage niske.
 
 
 \section{Podržane paradigme}
@@ -304,24 +358,6 @@ my student = Student->new(
 );
 \end{lstlisting}
 
-\section{Instaliranje i pokretanje}
-\label{sec:instalacija}
-
-Da bi se uspešno pokretao perl skript potrebno je imati kompajler\footnote{Strogo govoreći, perl program nije ni kompajler ni interpretator. Naime, perl program se najpre predstavi sintaksnim drvetom koje nakon toga izvršava perlov izvršni sistem\cite{glosar}. Imajući ovu činjenicu u vidu, u nastavku rada će biti korišćen naziv kompajler.}. U ovom poglavlju biće objašnjeno njegovo instaliranje na Linux i Windows operativnim sistemima.
-
-\subsection{Instaliranje na Linux operativnom sistemu}
-Da bismo instalirali Perl kompajler na Linux operativnom sistemu potrebno je da u terminalu unesemo komandu {\lstinline!sudo apt-get install perl!}. Od vas će se zatražiti da unesete lozinku. Kada se instalira Perl kompajler u terminalu pokrenite sledeću komandu  {\lstinline !curl -L http://xrl.us/installperlnix | bash!}. Kada sve bude gotovo, da biste se uverili da je instalacija uspešno izvršena ili ako želite da proverite koja je verzija Perl-a instalirana, to možete uraditi komandom {\lstinline!perl -v!}.
-
-\subsection{Pokretanje na Linux operativnom sistemu}
-Pokretanje Perl skripta na Linux operativnom sistemu se radi na jednostavan način. Potrebno je otvoriti terminal, a zatim uneti komandu {\lstinline!perl <putanja_do_fajla>!}. Ova komanda će pokrenuti izvršavanje skripta.
-
-\subsection{Instairanje na Windows operativnom sistemu}
-Pre instalacije na Windows operativnom sistemu poželjno je  prethodno proveriti da nijedna verzija Perla već nije instalirana. Ako želite da deinstalirate prethodnu verziju idite na  Control Panel - Add/Remove programs. Ako i dalje imate C:\textbackslash Strawberry folder, izbrišite ga ili ga preimenujte. Skinite i instalirajte Padre, the Perl IDE/editor. Strawberry Perl je deo instalacije, ali takođe dobijate i mnoge druge korisne CPAN module. Nakon instalacije, možda ćete morati da restartujete računar. Zatim idite na Start meni/All Programs i pronađite folder sa Perlom. U njemu kliknite na Perl komandnu liniju.  Da biste instalirali module iz CPAN-a u komandnoj liniji ukucajte komandu {\lstinline!cpan App::cpanminus!}. Ukoliko želite da  potvrdite da je instalacija uspešna ukucajte {\lstinline!perl -v!}, ovom komandom, takođe, možete proveriti koja je verzija Perl-a instalirana.
-
-\subsection{Pokretanje na Windowsu}
-Ako imamo instaliran Padre, the Perl IDE/editor, komande za pokretanje programa možemo zadati i iz editora. U meniju izaberemo Run, a zatim Run Script, mada možemo da pritisnemo taster F5 i skript \'ce biti pokrenut.
-Ako želimo, skript možemo pokrenuti i iz komandne linije tako što ukucamo {\lstinline!perl <putanja_do_fajla>!}.
-
 \section{Primeri koda}
 \label{sec:primeri}
 
@@ -411,62 +447,28 @@ print "$aa $bb\n";
 
 \end{primer}
 
-\section{\v Sta je ono što izdvaja Perl?}
 
-Velika Perl Arhiva\cite{cpan} (eng. ~{\em Comprenhensive Perl Archive Network(CPAN)}) 
- predstavlja online skladište Perl programa, dokumentacije i modula koji olakšavaju implementaciju i održavanje Perl projekata. Arhiva čuva oko 180 hiljada modula otvorenog koda napisanih od preko 12 hiljada 
- programera.
+\section{Instaliranje i pokretanje}
+\label{sec:instalacija}
 
-Glavni zadatak CPAN-a je da omogu\'ci programerima da prona\dj{}u module koji nisu uklju\v ceni u paket osnovnih modula. Paket osnovnih modula se dobija instalacijom Perl kompajlera. %Neki od njih su 
-Modul pod imenom CPAN.pm omogućava lako preuzimanje i instaliranje drugih Perl modula. 
+Da bi se uspešno pokretao perl skript potrebno je imati kompajler\footnote{Strogo govoreći, perl program nije ni kompajler ni interpretator. Naime, perl program se najpre predstavi sintaksnim drvetom koje nakon toga izvršava perlov izvršni sistem \cite{glosar}. Imajući ovu činjenicu u vidu, u nastavku rada će biti korišćen naziv kompajler.}. U ovom poglavlju biće objašnjeno njegovo instaliranje na Linux i Windows operativnim sistemima.
 
+\subsection{Instaliranje na Linux operativnom sistemu}
+Da bismo instalirali Perl kompajler na Linux operativnom sistemu potrebno je da u terminalu unesemo komandu {\lstinline!sudo apt-get install perl!}. Od vas će se zatražiti da unesete lozinku. Kada se instalira Perl kompajler u terminalu pokrenite sledeću komandu  {\lstinline !curl -L http://xrl.us/installperlnix | bash!}. Kada sve bude gotovo, da biste se uverili da je instalacija uspešno izvršena ili ako želite da proverite koja je verzija Perl-a instalirana, to možete uraditi komandom {\lstinline!perl -v!}.
 
-\subsection{Parsiranje tekstualnog sadržaja}
-% da je text processing language?, zbog cega je text processing language (sta je to sto omogucava procesiranje teksta), primer koda gde se parsira fajl, onaj primer sa frekvencijom reci u tekstu i da ga objasnim.
+\subsection{Pokretanje na Linux operativnom sistemu}
+Pokretanje Perl skripta na Linux operativnom sistemu se radi na jednostavan način. Potrebno je otvoriti terminal, a zatim uneti komandu {\lstinline!perl <putanja_do_fajla>!}. Ova komanda će pokrenuti izvršavanje skripta.
 
-Prve verzije Perl programskog jezika su u fokus stavljale obradu i manipulaciju tekstualnog sadržaja. Sama skra\'cenica PERL (Practical Extraction and Reporting Language) prikazuje osnovne namene jezika, a to su izvlačenje nekog sadržaja i generisanje izveštaja na osnovu tog sadržaja.
+\subsection{Instairanje na Windows operativnom sistemu}
+Pre instalacije na Windows operativnom sistemu poželjno je  prethodno proveriti da nijedna verzija Perla već nije instalirana. Ako želite da deinstalirate prethodnu verziju idite na  Control Panel - Add/Remove programs. Ako i dalje imate C:\textbackslash Strawberry folder, izbrišite ga ili ga preimenujte. Skinite i instalirajte Padre, the Perl IDE/editor. Strawberry Perl je deo instalacije, ali takođe dobijate i mnoge druge korisne CPAN module. Nakon instalacije, možda ćete morati da restartujete računar. Zatim idite na Start meni/All Programs i pronađite folder sa Perlom. U njemu kliknite na Perl komandnu liniju.  Da biste instalirali module iz CPAN-a u komandnoj liniji ukucajte komandu {\lstinline!cpan App::cpanminus!}. Ukoliko želite da  potvrdite da je instalacija uspešna ukucajte {\lstinline!perl -v!}, ovom komandom, takođe, možete proveriti koja je verzija Perl-a instalirana.
 
-Naredni primer prikazuje kako na jednostavan način možemo izračunati broj pojavljivanja svake reči u tekstu, pri čemu se za reč smatra niska karaktera koja se sastoji samo od malih i velikih slova abecede.
-
-\begin{lstlisting}[label=simple]
-while (my $line = <$fh>) {
-   chomp $line;
-   foreach my $str (split /^[A-Za-z]+$/, $line) {
-       $count{$str}++;
-    } 
-}
-\end{lstlisting}
-
-
-Dakle, prvo prolazimo kroz fajl (predstavlja referencu na fajl koji smo 
-prethodno otvorili) liniju po liniju, zatim iz linije uklanjamo znak za novi red, a potom za svaku reč (smeštenu u promenljivoj \$str) koja odgovara navedenom regularnom izrazu, ažuriramo strukturu u kojoj čuvamo reč i broj izračunatih pojavljivanja. Rezultat rada navedenog 
-dela koda je smešten u promenljivoj \$count. \cite{cooksnd}
-
-
-\subsection{Jednostavno korišćenje regularnih izraza}
-% da su reg izrazi "koren" parsiranja nekog teksta, i da perl pruza koriscenje regularnih izraza na elegantan nacin, sta su regularni izrazi, primer koda i da objasnim kod
-% da prikazem kako se koriste regularni izrazi u Perl programima na jednostavan nacin.
-% da je bogata podrska regularnim izrazima u Perl-u
-
-Važnu ulogu pri manipulaciji tekstualnog sadržaja igraju regularni izrazi. Regularni izrazi su šabloni koji mogu biti prepoznati u nizovima karaktera. Rezultat rada operacije prepoznavanja šablona jeste tačno ili netačno, odnosno da li niz karaktera odgovara datom šablonu ili ne. Perl ima ugradjene mehanizme koji čine rad sa regularnim izrazima lakšim, nalik na alate grep, sed i awk.\cite{sed} %ovde referenca na neki grep sed..., pitati za ovo
+\subsection{Pokretanje na Windowsu}
+Ako imamo instaliran Padre, the Perl IDE/editor, komande za pokretanje programa možemo zadati i iz editora. U meniju izaberemo Run, a zatim Run Script, mada možemo da pritisnemo taster F5 i skript \'ce biti pokrenut.
+Ako želimo, skript možemo pokrenuti i iz komandne linije tako što ukucamo {\lstinline!perl <putanja_do_fajla>!}.
 
 
 
-Osnovni operatori primene regularnih izraza, koje Perl nudi, jesu $=\sim$ i $!\sim$. U izrazu \$str $=\sim$ m/regex/ se proverava da li se data niska \$str podudara sa regularnim izrazom regex. Regularni izrazi se navode izme\dj{}u dve kose crte. U slučaju da je došlo do poklapanja, izraz vraća 1, a nula inače. Operator $!\sim$ radi suprotno, u slučaju podudaranja vraća 0, a 1 inače.
-
-Postoje tri osnovne operacije sa regularnim izrazima:
-
-\begin{itemize}
-  \item Provera podudaranja - m/regex/
-  \item Zamena re\v ci - s/regex/word/
-  \item Translacija - tr/regex/word/
-\end{itemize}
-
-Zamena reči funkcioniše tako što se sva podudaranja regularnog izraza u nisci zamene navedenom niskom. Na primer u izrazu "Volim mačke!" =~ s/mačke/pse, deo niske mačke \' ce biti zamenjen sa pse, i novodobijena niska predstavlja rezultat izraza.
-
-Translacija je slična zameni reči, sa tim što ne koristi regularne izraze prilikom pretrage niske.
-
-
+\newpage
 \section{Zaključak}
 \label{sec:zakljucak}
 
