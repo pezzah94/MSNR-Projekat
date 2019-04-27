@@ -64,7 +64,7 @@
 \maketitle
 
 \abstract{
-Cilj ovog rada je da čitaocu, kroz primere koda i pregled glavnih namena programskog jezika Perl, izgradi prvi utisak o jeziku koji je zbog svoje jednostavnosti i čiste sintakse, ali i mnogih mehanizama koji su u njega ugrađeni, uticao na razvoj mnogih jezika. U ovom radu biće prikazano kako se Perl razvijao kroz istoriju, kao i zašto se mnogi programeri opredeljuju za njega.}
+Cilj ovog rada je da čitaocu, kroz primere k\^{o}da i pregled glavnih namena programskog jezika Perl, izgradi prvi utisak o jeziku koji je zbog svoje jednostavnosti i čiste sintakse, ali i mnogih mehanizama koji su u njega ugrađeni, uticao na razvoj mnogih jezika. U ovom radu biće prikazano kako se Perl razvijao kroz istoriju, kao i zašto se mnogi programeri opredeljuju za njega.}
 \setcounter{tocdepth}{1}
 \tableofcontents
 
@@ -74,8 +74,8 @@ Cilj ovog rada je da čitaocu, kroz primere koda i pregled glavnih namena progra
 \label{sec:uvod}
 
 Ve\'cina programskih jezika je osmi\v sljena sa ciljem da reši određenu grupu problema, tako je i programski jezik Perl nastao da reši neke česte probleme pri razvoju softvera. Kao takav programski jezik Perl je stekao veliku popularnost i ima širok domen primene. Perl spada u jezike koji se lako uče jer imaju jednostavnu sintaksu nalik na prirodne jezike. Uz podršku velikog broja modula, Perl programi ostvaruju obimnu funkcionalnost uz minimalan skup naredbi. Iako su njegovu popularnost
-preoteli moderniji programski jezici, i dalje predstavlja ozbiljno oružje kod veb programiranja.
-U ovom radu \'cemo napraviti pregled osnovnih mogućnosti Perl-a, njegovih karakteristika i specifičnosti. Navešćemo popularna okruženja koja Perl koristi i uputstvo za instalaciju.
+preoteli moderniji programski jezici, i dalje predstavlja ozbiljno oružje k\^{o}d veb programiranja.
+U ovom radu \'cemo napraviti pregled osnovnih mogućnosti Perla, njegovih karakteristika i specifičnosti. Navešćemo popularna okruženja koja Perl koristi i uputstvo za instalaciju.
 
 
 
@@ -84,7 +84,7 @@ U ovom radu \'cemo napraviti pregled osnovnih mogućnosti Perl-a, njegovih karak
 
 Priču o Perlu ne možemo a da ne započnemo sa njegovim stvaraocem Lerijem Volom (eng.~{\em Larry Wall}). Kako sam naglašava u tom trenutku postoje i druga rešenja ali nijedno od njih ne rešava ovu vrstu problema na lak i intuitivan način. Zbog prirode problema nameće se jezik koji će pripadati skript paradigmi. Želeo je da naziv bude kratka reč pozitivne konotacije. Opredeljuje se za pearl(srb.~{\em biser}) ali izostavlja slovo a zbog mogućeg podudaranja sa drugim jezikom u izradi.(Larry Wall, the Guru of Perl, Linux Journal 1. maj 1999)\\
 
-Perl 1.0 postaje dostupan 18. decembra 1987. godine korisnicima Usneta \footnote{Preteča internta na Unix sistemima za komunikaciju širom sveta}, u sekciji posvećenoj ra\v cunarima. Jedna od ideja vodilja prilikom izrade ovog programa bilo je da, kao i bilo koji drugi jezik, raste i evoluira. Ovakav pristup se ogleda u brojnim izborima koje Vol donosi u fazi projektovanja. Kao primer navodimo da je moguće  dotati nove ključne reči u bilo kom trenutku bez narušavanja starih kodova \cite{id}. Još jedna osobina ljudskih jezika je da nije potrebno poznavanje jezika u celini radi efikasnog korisćenja, \v sto važi i za Perl. Ovakve odluke naravno imaju i svoje posledice na performanse koje su za Vola prihvatljive jer on pre svega pokušava da olakša korišćenje programa njegovim korisnicima.\\
+Perl 1.0 postaje dostupan 18. decembra 1987. godine korisnicima Usneta \footnote{Preteča internta na Unix sistemima za komunikaciju širom sveta}, u sekciji posvećenoj ra\v cunarima. Jedna od ideja vodilja prilikom izrade ovog programa bilo je da, kao i bilo koji drugi jezik, raste i evoluira. Ovakav pristup se ogleda u brojnim izborima koje Vol donosi u fazi projektovanja. Kao primer navodimo da je moguće  dotati nove ključne reči u bilo kom trenutku bez narušavanja starih k\^{o}dova \cite{id}. Još jedna osobina ljudskih jezika je da nije potrebno poznavanje jezika u celini radi efikasnog korisćenja, \v sto važi i za Perl. Ovakve odluke naravno imaju i svoje posledice na performanse koje su za Vola prihvatljive jer on pre svega pokušava da olakša korišćenje programa njegovim korisnicima.\\
 
 \begin{table}
 
@@ -106,16 +106,16 @@ Perl 1.0 postaje dostupan 18. decembra 1987. godine korisnicima Usneta \footnote
 \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{}                                                                                                                                  \\
 \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{}                                                                                                                                 
 \end{tabular}
-\caption {Pregled osnovnih doprinosa različitih verzija Perl-a}
+\caption {Pregled osnovnih doprinosa različitih verzija Perla}
 \end{table}
 
 %Ostajući dosledan svoje zamisli da Perla stalno napreduje u naredne dve godine pojavljuje se čak dve nove verzije 2.0 i 3.0. Najznacajnije novine su nova podrska za regularne izraze, foreach iterator, mogućnost rekurzivnih metoda, rad sa binarnom reprezentacijom i prosleđivanje referenci na promenljive\cite{patchnotes}.\\
 Verzija 4.0 prati izdavanje knjige Programing Perl(Randal Schwartz, Larry Wall, 1991). Ovo izdanje se smatra prvom kompletnom dokumentacijom za Perl. Na svojoj naslovnoj strani ima kamilu koja je postala sinonim za Perl u svetu programiranja\cite{perlOrg}.\\
 
 %18. oktobra 1994. godine objavljen je Perl 5.0. Ovo verzija sa sobom donosi do sad najveće promene uključujući i potpuno novi interpretator. Sredinom devedesetih kao dominantna paradigma nameće se objektna pa nas ne čudi da je jedna od glavnih promena u okviru ovoe verzije dodavanje podrske za rad sa objektima.\\
-%Do kraja dvadesetog veka izlazi veliki broj novih verzija ali svakako manjeg obima. Najbitnije promene u ovom periodu nisu vezane za sam jezik već se odnose na pojavljivanje Perla na Windwosu kao i na pravljenje velike online baze modula i kodova CPAN(Comprehensive Perl Archive Network).\\
+%Do kraja dvadesetog veka izlazi veliki broj novih verzija ali svakako manjeg obima. Najbitnije promene u ovom periodu nisu vezane za sam jezik već se odnose na pojavljivanje Perla na Windwosu kao i na pravljenje velike online baze modula i k\^{o}dova CPAN(Comprehensive Perl Archive Network).\\
 Početak dvadest prvog veka obeležen je nastavkom evoluiranja Perla koji se prilagođava svim potrebama modernog programiranja. Podrška za mrežno programiranje kao i za implementaciju funkcionalne paradigme samo su neki od primera. Sve popularniji pretrazivac DuckDuckGo većinski je implementiran u Perlu\cite{duck}.
-%Nemoguce je ne pomenuti Perl 6.0. Ijako član porodice programa Perl nije nastavak Perla 5 već predstavlja jezik za sebe. Dizajner ove verzije je takođe Vol ali se implementira kao projekat otvorenog koda. Prva stabilna verzija objavljena je 2017 godine \footnote[1]{Iz ovog razloga u ovom radu se primarno bavimo verzijom 5}
+%Nemoguce je ne pomenuti Perl 6.0. Ijako član porodice programa Perl nije nastavak Perla 5 već predstavlja jezik za sebe. Dizajner ove verzije je takođe Vol ali se implementira kao projekat otvorenog k\^{o}da. Prva stabilna verzija objavljena je 2017 godine \footnote[1]{Iz ovog razloga u ovom radu se primarno bavimo verzijom 5}
 
 \subsection{Mesto u razvojnom stablu i uticaji drugih programskih jezika}
 
@@ -143,11 +143,11 @@ Kao odgovor na sve veću potražnju objektno orijentisanih jezika Perl nudi bibl
 \section{Osnovne osobine}
 \label{sec:osobine}
 
-Prvobitna zamisao autora Perl-a, Lerija Vola, bila je da napravi alat koji bi na brz i lak način omogućio napredno rukovanje proizvoljnim tekstualnim datotekama. Jezik je osmišljen sa idejom da se veći značaj prida njegovoj praktičnosti(lakoća korišćenja, efikasnost, kompletnost) nego lepoti(minimalnost, elegancija). Autor smatra da je implementacijom Perla uspeo da izdvoji i iskoristi najbolje funkcionalnosti jezika C, awk, sed i sh\cite{wallperl}.\\
+Prvobitna zamisao autora Perla, Lerija Vola, bila je da napravi alat koji bi na brz i lak način omogućio napredno rukovanje proizvoljnim tekstualnim datotekama. Jezik je osmišljen sa idejom da se veći značaj prida njegovoj praktičnosti(lakoća korišćenja, efikasnost, kompletnost) nego lepoti(minimalnost, elegancija). Autor smatra da je implementacijom Perla uspeo da izdvoji i iskoristi najbolje funkcionalnosti jezika C, awk, sed i sh\cite{wallperl}.\\
 Sintaksa je usko povezana sa sintaksom C-a. Umesto da, kao većina Unix alata, ograničava memoriju, Perl je sposoban da čitav fajl učita kao jednu nisku(ukoliko je dovoljno memorije raspoloživo). Pažljivo osmišljeni mehanizmi poklapanja obrazaca (eng.~{\em pattern matching}) programeru pružaju veoma moćan alat za brzo čitanje velikih datoteka.
 Osim za obradu teksta, Perl je tokom godina postao odličan alat za obavljanje raznih sistemskih zadataka, veb programiranje, grafičko programiranje, pristup bazama podataka, mrežno programiranje i mnoge druge zadatke. \\ 
 
-Bitno je još i naglasiti da je Perl interpretirani jezik što omogućava prenosivost jednom napisanih kodova na veliki broj različitih platformi\footnote{Kompletan spisak podržanih platformi može se naći na sledećoj \href{https://perldoc.perl.org/perlport.html#Supported-Platforms}{adresi.}}. Za razliku od strogo (eng.~{\em strictly}) interpretiranih jezika, Perl program se najpre prevodi u sintaksno drvo i nakon toga se izvršava (više reči o korišćenju Perl interpretatora u 
+Bitno je još i naglasiti da je Perl interpretirani jezik što omogućava prenosivost jednom napisanih k\^{o}dova na veliki broj različitih platformi\footnote{Kompletan spisak podržanih platformi može se naći na sledećoj \href{https://perldoc.perl.org/perlport.html#Supported-Platforms}{adresi.}}. Za razliku od strogo (eng.~{\em strictly}) interpretiranih jezika, Perl program se najpre prevodi u sintaksno drvo i nakon toga se izvršava (više reči o korišćenju Perl interpretatora u 
 \ref{sec:instalacija}).
 
 \subsection{Tipovi podataka}
@@ -172,7 +172,7 @@ my $broj_elemenata = @niz
 \section{\v Sta je ono što izdvaja Perl?}
 
 Velika Perl Arhiva\cite{cpan} (eng. ~{\em Comprenhensive Perl Archive Network(CPAN)}) 
- predstavlja online skladište Perl programa, dokumentacije i modula koji olakšavaju implementaciju i održavanje Perl projekata. Arhiva čuva oko 180 hiljada modula otvorenog koda napisanih od preko 12 hiljada 
+ predstavlja online skladište Perl programa, dokumentacije i modula koji olakšavaju implementaciju i održavanje Perl projekata. Arhiva čuva oko 180 hiljada modula otvorenog k\^{o}da napisanih od preko 12 hiljada 
  programera.
 
 Glavni zadatak CPAN-a je da omogu\'ci programerima da prona\dj{}u module koji nisu uklju\v ceni u paket osnovnih modula. Paket osnovnih modula se dobija instalacijom Perl kompajlera. %Neki od njih su 
@@ -180,7 +180,7 @@ Modul pod imenom CPAN.pm omogućava lako preuzimanje i instaliranje drugih Perl 
 
 
 \subsection{Parsiranje tekstualnog sadržaja}
-% da je text processing language?, zbog cega je text processing language (sta je to sto omogucava procesiranje teksta), primer koda gde se parsira fajl, onaj primer sa frekvencijom reci u tekstu i da ga objasnim.
+% da je text processing language?, zbog cega je text processing language (sta je to sto omogucava procesiranje teksta), primer k\^{o}da gde se parsira fajl, onaj primer sa frekvencijom reci u tekstu i da ga objasnim.
 
 Prve verzije Perl programskog jezika su u fokus stavljale obradu i manipulaciju tekstualnog sadržaja. Sama skra\'cenica PERL (Practical Extraction and Reporting Language) prikazuje osnovne namene jezika, a to su izvlačenje nekog sadržaja i generisanje izveštaja na osnovu tog sadržaja.
 
@@ -198,11 +198,11 @@ while (my $line = <$fh>) {
 
 Dakle, prvo prolazimo kroz fajl (predstavlja referencu na fajl koji smo 
 prethodno otvorili) liniju po liniju, zatim iz linije uklanjamo znak za novi red, a potom za svaku reč (smeštenu u promenljivoj \$str) koja odgovara navedenom regularnom izrazu, ažuriramo strukturu u kojoj čuvamo reč i broj izračunatih pojavljivanja. Rezultat rada navedenog 
-dela koda je smešten u promenljivoj \$count \cite{cooksnd}.
+dela k\^{o}da je smešten u promenljivoj \$count \cite{cooksnd}.
 
 
 \subsection{Jednostavno korišćenje regularnih izraza}
-% da su reg izrazi "koren" parsiranja nekog teksta, i da perl pruza koriscenje regularnih izraza na elegantan nacin, sta su regularni izrazi, primer koda i da objasnim kod
+% da su reg izrazi "koren" parsiranja nekog teksta, i da perl pruza koriscenje regularnih izraza na elegantan nacin, sta su regularni izrazi, primer k\^{o}da i da objasnim k\^{o}d
 % da prikazem kako se koriste regularni izrazi u Perl programima na jednostavan nacin.
 % da je bogata podrska regularnim izrazima u Perl-u
 
@@ -227,7 +227,7 @@ Translacija je slična zameni reči, sa tim što ne koristi regularne izraze pri
 
 \section{Podržane paradigme}
 
-Izjava Lerija Vola da ''Perl nema nikakvu agendu, osim da bude maksimalno korisan maksimalnom broju ljudi.''\cite{walltalk} oslikava težnju Perla da bude što opštiji jezik. Ta tvrdnja je potkrepljena i time što su podržane proceduralna, funkcionalna i objektno-orijentisana paradigma. 
+Izjava Lerija Vola da \emph{''Perl nema nikakvu agendu, osim da bude maksimalno koristan maksimalnom broju ljudi.''}\cite{wallperl} oslikava težnju Perla da bude što opštiji jezik. Ta tvrdnja je potkrepljena i time što su podržane proceduralna, funkcionalna i objektno orijentisana paradigma. 
 
 \subsection{Proceduralna paradigma}
 %TODO: popraviti drugu referencu
@@ -273,9 +273,10 @@ my @rezultat = mapfun ($mapme, @niz);
 Nakon izvršavanja ovog k\^{o}da, u promenljivoj {\lstinline!@rezultat!} se nalaze brojevi 107, 0 i -50. 
 
 
-\subsection{Objektno-orijentisana paradigma}
+\subsection{Objektno orijentisana paradigma}
+\label{subsec:oop}
 
-Iako Perl nije objektno-orijentisan jezik, može instancirati i manipulisati objektima. Klase su predstavljene paketima, koji moraju posedovati {\lstinline!new!} podrutinu da bi se mogli instancirati. Objekat neke klase se može predstaviti uz pomoć niza ili heša. Enkapsulacija se postiže izdvajanjem interfejsa u pakete. Mehanizam za postizanje polimorfizma je korišćenje ključne reči {\lstinline!bless!}. Ova ključna reč običnu referencu na strukturu podataka označava kao pripadnika nekom paketu i time proširuje mogućnosti te strukture. Nasleđivanje se ostvaruje pomoću specijalnog niza {\lstinline!@ISA!}. Ovaj niz čuva spisak imena modula koji se nasleđuju. U narednom primeru biće prikazani neki od ovih koncepata.\cite{Srinivasan:1997:APP:549810}
+Iako Perl nije objektno orijentisan jezik, može instancirati i manipulisati objektima. Klase su predstavljene paketima, koji moraju posedovati {\lstinline!new!} podrutinu da bi se mogli instancirati. Objekat neke klase se može predstaviti uz pomoć niza ili heša. Enkapsulacija se postiže izdvajanjem interfejsa u pakete. Mehanizam za postizanje polimorfizma je korišćenje ključne reči {\lstinline!bless!}. Ova ključna reč običnu referencu na strukturu podataka označava kao pripadnika nekom paketu i time proširuje mogućnosti te strukture. Nasleđivanje se ostvaruje pomoću specijalnog niza {\lstinline!@ISA!}. Ovaj niz čuva spisak imena modula koji se nasleđuju. U narednom primeru biće prikazani neki od ovih koncepata.\cite{Srinivasan:1997:APP:549810}
 
 \begin{lstlisting}[  label = objPerl]
 package Student;    
@@ -317,11 +318,11 @@ Perl je stekao veliku popularnost u ranim danima veba i često se opisuje kao le
 
 \subsection{Catalyst}
 
-Catalyst je jedno od najrasprostranjenijih Perl okruženja za razvoj veb aplikacija zasnovano na MVC (eng.~{\em Model View Controller}) arhitekturi. Ovo okruženje pruža nivo apstrakcije nad uobičajenim ciklusom zahteva i odgovora. Zahtevi omogućavaju lako gledanje argumenata nadolazećih upita, POST podataka, otpremanje datoteka i zaglavlja dok odgovori pružaju mogućnost postavljanja zaglavlja i vraćanja izlaza klijentu. 
+\href{http://www.catalystframework.org/}{Catalyst} je jedno od najrasprostranjenijih Perl okruženja za razvoj veb aplikacija zasnovano na MVC\cite{mvc} (eng.~{\em Model View Controller}) arhitekturi. Ovo okruženje pruža nivo apstrakcije nad uobičajenim ciklusom zahteva i odgovora. Zahtevi omogućavaju lako gledanje argumenata nadolazećih upita, POST podataka, otpremanje datoteka i zaglavlja dok odgovori pružaju mogućnost postavljanja zaglavlja i vraćanja izlaza klijentu. 
 
 \subsection{Dancer}
 
-Dancer je okvir za pisanje veb aplikacija veoma intuitivne i izražajne sintakse. Modelovan je po uzoru na Ruby radni okvir, Sinatra. Aplikacije se grade navođenjem HTTP glagola, URL-ova (putanja) i metoda za obradu saobraćaja ka tim konkretnim URL-ovima. 
+\href{http://perldancer.org/}{Dancer} je okvir za pisanje veb aplikacija veoma intuitivne i izražajne sintakse. Modelovan je po uzoru na Ruby radni okvir, \href{http://sinatrarb.com/}{Sinatra}. Aplikacije se grade navođenjem HTTP glagola, URL-ova (putanja) i metoda za obradu saobraćaja ka tim konkretnim URL-ovima. 
 
 \begin{lstlisting}[label = dancer]
 use Dancer2;
@@ -339,7 +340,7 @@ start;
 
 \subsection{Moose}
 
-Iako Perl ima podršku za objektno orijentisanu paradigmu, Moose pokušava da pisanje OO programa učini još lakšim i da programerima pruži jednostavnu deklarativnu sintaksu koja bi eliminisala potrebu za pisanjem konstruktora, destruktora i pristupnih metoda. U pozadini se i dalje dešava nešto slično onome opisanom u \href{sec:osobine}, ali je programer zaštićen od tih detalja implementacije i pruža mu se veći stepen apstrakcije.
+Iako Perl ima podršku za objektno orijentisanu paradigmu, \href{https://metacpan.org/pod/Moose}{Moose} pokušava da pisanje OO programa učini još lakšim i da programerima pruži jednostavnu deklarativnu sintaksu koja bi eliminisala potrebu za pisanjem konstruktora, destruktora i pristupnih metoda. U pozadini se i dalje dešava nešto slično onome opisanom u \ref{subsec:oop}, ali je programer zaštićen od tih detalja implementacije i pruža mu se veći stepen apstrakcije.
 
 \begin{lstlisting}[label = moose]
 package Student;
@@ -358,10 +359,10 @@ my student = Student->new(
 );
 \end{lstlisting}
 
-\section{Primeri koda}
+\section{Primeri k\^{o}da}
 \label{sec:primeri}
 
-Sledeći kod predstavlja primer ispisa Hello world programa. Komentare pišemo iza tarabe. Tekst možemo ispisati tako što ga navedemo iza navodnika ili koristeći funkciju qq.
+Sledeći k\^{o}d predstavlja primer ispisa Hello world programa. bKomentare pišemo iza tarabe. Tekst možemo ispisati tako što ga navedemo iza navodnika ili koristeći funkciju qq.
 \begin{lstlisting}[ label=hello]
 #Komentar
 print "Hello, world!\n";
@@ -402,7 +403,7 @@ Možemo zadavati i argumente komandne linije. Argumentima komandne linije pristu
 $br_arg = $#ARGV + 1;
 print "Broj argumenata komandne linije je $br_arg: @ARGV\n";
 \end{lstlisting}
-Sledećim kodom je prikazan primer korišćenja while petlje. Program prihvata argumente sa ulaza i ispisuje ih na ekran. Ključna reč my označava da je domen promenljive samo taj blok. Promenljiva \$in u while petlji nema uticaj na promenljivu sa istim nazivom van petlje.
+Sledećim k\^{o}dom je prikazan primer korišćenja while petlje. Program prihvata argumente sa ulaza i ispisuje ih na ekran. Ključna reč my označava da je domen promenljive samo taj blok. Promenljiva \$in u while petlji nema uticaj na promenljivu sa istim nazivom van petlje.
 \begin{lstlisting}[ label=while]
 $in = 5;
 while(my $in = <>) {
@@ -436,7 +437,7 @@ sub obim_kvadrata {
 %\end{lstlisting}
 
 \begin{primer}
-Sledeći kod predstavlja jednostavan način da zamenimo vrednosti dve promenljive.
+Sledeći k\^{o}d predstavlja jednostavan način da zamenimo vrednosti dve promenljive.
 \begin{lstlisting}[  label=zamena]
 $aa = 3;
 $bb = 2;
@@ -454,13 +455,13 @@ print "$aa $bb\n";
 Da bi se uspešno pokretao perl skript potrebno je imati kompajler\footnote{Strogo govoreći, perl program nije ni kompajler ni interpretator. Naime, perl program se najpre predstavi sintaksnim drvetom koje nakon toga izvršava perlov izvršni sistem \cite{glosar}. Imajući ovu činjenicu u vidu, u nastavku rada će biti korišćen naziv kompajler.}. U ovom poglavlju biće objašnjeno njegovo instaliranje na Linux i Windows operativnim sistemima.
 
 \subsection{Instaliranje na Linux operativnom sistemu}
-Da bismo instalirali Perl kompajler na Linux operativnom sistemu potrebno je da u terminalu unesemo komandu {\lstinline!sudo apt-get install perl!}. Od vas će se zatražiti da unesete lozinku. Kada se instalira Perl kompajler u terminalu pokrenite sledeću komandu  {\lstinline !curl -L http://xrl.us/installperlnix | bash!}. Kada sve bude gotovo, da biste se uverili da je instalacija uspešno izvršena ili ako želite da proverite koja je verzija Perl-a instalirana, to možete uraditi komandom {\lstinline!perl -v!}.
+Da bismo instalirali Perl kompajler na Linux operativnom sistemu potrebno je da u terminalu unesemo komandu {\lstinline!sudo apt-get install perl!}. Od vas će se zatražiti da unesete lozinku. Kada se instalira Perl kompajler u terminalu pokrenite sledeću komandu  {\lstinline !curl -L http://xrl.us/installperlnix | bash!}. Kada sve bude gotovo, da biste se uverili da je instalacija uspešno izvršena ili ako želite da proverite koja je verzija Perla instalirana, to možete uraditi komandom {\lstinline!perl -v!}.
 
 \subsection{Pokretanje na Linux operativnom sistemu}
 Pokretanje Perl skripta na Linux operativnom sistemu se radi na jednostavan način. Potrebno je otvoriti terminal, a zatim uneti komandu {\lstinline!perl <putanja_do_fajla>!}. Ova komanda će pokrenuti izvršavanje skripta.
 
 \subsection{Instairanje na Windows operativnom sistemu}
-Pre instalacije na Windows operativnom sistemu poželjno je  prethodno proveriti da nijedna verzija Perla već nije instalirana. Ako želite da deinstalirate prethodnu verziju idite na  Control Panel - Add/Remove programs. Ako i dalje imate C:\textbackslash Strawberry folder, izbrišite ga ili ga preimenujte. Skinite i instalirajte Padre, the Perl IDE/editor. Strawberry Perl je deo instalacije, ali takođe dobijate i mnoge druge korisne CPAN module. Nakon instalacije, možda ćete morati da restartujete računar. Zatim idite na Start meni/All Programs i pronađite folder sa Perlom. U njemu kliknite na Perl komandnu liniju.  Da biste instalirali module iz CPAN-a u komandnoj liniji ukucajte komandu {\lstinline!cpan App::cpanminus!}. Ukoliko želite da  potvrdite da je instalacija uspešna ukucajte {\lstinline!perl -v!}, ovom komandom, takođe, možete proveriti koja je verzija Perl-a instalirana.
+Pre instalacije na Windows operativnom sistemu poželjno je  prethodno proveriti da nijedna verzija Perla već nije instalirana. Ako želite da deinstalirate prethodnu verziju idite na  Control Panel - Add/Remove programs. Ako i dalje imate C:\textbackslash Strawberry folder, izbrišite ga ili ga preimenujte. Skinite i instalirajte Padre, the Perl IDE/editor. Strawberry Perl je deo instalacije, ali takođe dobijate i mnoge druge korisne CPAN module. Nakon instalacije, možda ćete morati da restartujete računar. Zatim idite na Start meni/All Programs i pronađite folder sa Perlom. U njemu kliknite na Perl komandnu liniju.  Da biste instalirali module iz CPAN-a u komandnoj liniji ukucajte komandu {\lstinline!cpan App::cpanminus!}. Ukoliko želite da  potvrdite da je instalacija uspešna ukucajte {\lstinline!perl -v!}, ovom komandom, takođe, možete proveriti koja je verzija Perla instalirana.
 
 \subsection{Pokretanje na Windowsu}
 Ako imamo instaliran Padre, the Perl IDE/editor, komande za pokretanje programa možemo zadati i iz editora. U meniju izaberemo Run, a zatim Run Script, mada možemo da pritisnemo taster F5 i skript \'ce biti pokrenut.
