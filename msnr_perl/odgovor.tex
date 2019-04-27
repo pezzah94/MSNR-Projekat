@@ -1,0 +1,305 @@
+
+
+ % !TEX encoding = UTF-8 Unicode
+
+\documentclass[a4paper]{report}
+
+\usepackage[T2A]{fontenc} % enable Cyrillic fonts
+\usepackage[utf8x,utf8]{inputenc} % make weird characters work
+\usepackage[serbian]{babel}
+%\usepackage[english,serbianc]{babel}
+\usepackage{amssymb}
+
+\usepackage{color}
+\usepackage{url}
+\usepackage[unicode]{hyperref}
+\hypersetup{colorlinks,citecolor=green,filecolor=green,linkcolor=blue,urlcolor=blue}
+
+\newcommand{\odgovor}[1]{\textcolor{blue}{#1}}
+
+\begin{document}
+
+\title{Dopunite naslov svoga rada\\ \small{Dopunite autore rada}}
+
+\maketitle
+
+\tableofcontents
+
+\chapter{Uputstva}
+\emph{Prilikom predavanja odgovora na recenziju, obrišite ovo poglavlje.}
+
+Neophodno je odgovoriti na sve zamerke koje su navedene u okviru recenzija. Svaki odgovor pišete u okviru okruženja \verb"\odgovor", \odgovor{kako bi vaši odgovori bili lakše uočljivi.} 
+\begin{enumerate}
+
+\item Odgovor treba da sadrži na koji način ste izmenili rad da bi adresirali problem koji je recenzent naveo. Na primer, to može biti neka dodata rečenica ili dodat pasus. Ukoliko je u pitanju kraći tekst onda ga možete navesti direktno u ovom dokumentu, ukoliko je u pitanju duži tekst, onda navedete samo na kojoj strani i gde tačno se taj novi tekst nalazi. Ukoliko je izmenjeno ime nekog poglavlja, navedite na koji način je izmenjeno, i slično, u zavisnosti od izmena koje ste napravili. 
+
+\item Ukoliko ništa niste izmenili povodom neke zamerke, detaljno obrazložite zašto zahtev recenzenta nije uvažen.
+
+\item Ukoliko ste napravili i neke izmene koje recenzenti nisu tražili, njih navedite u poslednjem poglavlju tj u poglavlju Dodatne izmene.
+\end{enumerate}
+
+Za svakog recenzenta dodajte ocenu od 1 do 5 koja označava koliko vam je recenzija bila korisna, odnosno koliko vam je pomogla da unapredite rad. Ocena 1 označava da vam recenzija nije bila korisna, ocena 5 označava da vam je recenzija bila veoma korisna. 
+
+NAPOMENA: Recenzije ce biti ocenjene nezavisno od vaših ocena. Na osnovu recenzije ja znam da li je ona korisna ili ne, pa na taj način vama idu negativni poeni ukoliko kažete da je korisno nešto što nije korisno. Vašim kolegama šteti da kažete da im je recenzija korisna jer će misliti da su je dobro uradili, iako to zapravo nisu. Isto važi i na drugu stranu, tj nemojte reći da nije korisno ono što jeste korisno. Prema tome, trudite se da budete objektivni. 
+\chapter{Recenzent \odgovor{--- ocena:} }
+
+
+\section{O čemu rad govori?}
+Rad govori o razvoju Perla, njegovom uticaju na Python, Rubi i PHP. Regexi, bezdebnost i obrada teksta su glavne mogućnosti. Skalari, nizovi skalara i heševi su osnovni ugrađeni tipovi. Pored skript paradigme podržani koncepti proceduralne, funkcionalne i objektno-orijentisane. Upoznavanje Catalyst, Dancer i Moose okruženja, jednostavnog Perl k\^{o}da i načina instalacije i pokretanja. 
+
+\section{Krupne primedbe i sugestije}
+
+Što se tiče primedbi koje se odnose na strukturu i sadžaj rada, biće navedene redoslednom kojim idu poglavlja.
+
+U uvodu je iz prve dve rečenice nejasno koji su česti problemi pri razvoju softvera i kakav je to programski jezik Perl. Takođe, koji su to moderniji programski jezici koji su preoteli popularnost. U uvodu se po nekom pravilu 
+najviše referiše, dok ovde nema ni jedne reference.
+
+U poglavlju 2, navode se dve knjige koje bi trebalo staviti u spisak literature i zatim referisati na njih. U prvom pasusu na strani 2 nije jasno koju vrstu problema druga rešenja ne rešavaju. Ne referiše se na tabelu iz teksta i naslov tabele treba da bude iznad tabele. Na slici 1 nazivi se ne vide lepo kad se oštampa tj. previše su sitni, a linije uzimaju primat i samim tim nije dovoljno čitljiva. U poslednjem pasusu se govori o želji da se objedini moć teksualnog procesiranja Perla sa Pythonom, nedostaje referenca odakle se to zna.
+
+U poglavlju 3 bilo bi lakše čitaocu kada bi imali priliku da pročitaju više o tainted modu i o biblioteci Moose odnosno da postoje reference.
+
+U 5.1 poslednji pasus bi trebalo preformulisati kako bi činio pasus (da ima bar 3 rečenice) i da lakše može da se isprati šta se dešava. U 5.2 poslednja dva pasusa - o zameni reči i translaciji ovako napisani nisu pasusi (imaju manje od 3 rečenice). Takođe, ukoliko bi se dodalo kako izgleda novodobijena niska lepše bi izgledalo.
+
+U poglavlju 6, citat Lerija Vola bi trebalo da bude italic slovima.
+\odgovor{Citat je izmenjen.} Poglavlja 6 i 7 bi trebalo da idu nakon poglavlja 8 - primer k\^{o}da, jer se u osmom poglavlju čitalac upoznaje sa sintaksom jezika, a u prethodnim poglavljima se nalaze k\^{o}dovi koji u trenutnom redosledu nisu laki za razumeti.
+
+U poglavlju 7 bi reference na Catalyst, MVC, Dancer, Sinatru učinili poglavlje još čitljivijim.
+\odgovor{Dodati su linkovi na web stranice na kojima se može naći više informacija o navedenim okruženjima i terminima. Reference nisu navedene u literaturi zbog propisanog ograničenja broja stranica.} 
+Pasus za Dancer ima samo 2 rečenice, te ne čini pasus. 
+\odgovor{Navedeni pasus sadrži 3 rečenice.} 
+U 7.3 pise '... opisanom u , ...' odnosno refereca je propuštena. \odgovor{Referenca je popravljena.}
+
+Poglavlje 8 je lepo objašenjeno i čitko napisano, dodavanje labela k\^{o}dovima bi moglo da doprinese tome da se zna šta koji k\^{o}d radi bez da se čita tekst.
+
+Poglavlje 9 bi dobilo lepši izgled sa samo 2 podnaslova 'Instalacija i pokretanje na Linux-u' i 'Instalacija i pokretanje na Windows-u' ili slično, jer su trenutni naslovi previše glomazni, a pasusi se nadopunjuju pa mogu činiti jednu celinu.
+
+U literaturi za sajtove nedostaju autori, knjiga [13] nema podatke o izdavaču i godini, a unos [14] bi trebalo uneti sa @inproceedings i svim podacima koje to podrazumeva - odnosno unos članka sa konferencije.
+\odgovor{Autori sajtova nisu pronađeni. Pomenuta knjiga [13] (Larry Wall. The perl programming language.) je zapravo rad i navedeni su nedostajući podaci. Nakon ažuriranja literature, promenjen je broj reference. Unos [14] (Larry Wall. Perl, the first postmodern computer language.) je ispravljen na predloženi način i navedeni su odgovarajući podaci. }
+
+\section{Sitne primedbe}
+
+Što se tiče štamparskih grešaka nema ih mnogo, radi lakšeg snalaženja navedene su taksativno sa pokušajem da budu što detaljnije opisane gde su: 
+\begin{itemize}
+	\item[--] str. 2, prvi pasus, treći red nedostaje zarez pre ali
+    \item[--] str. 2, poslednji pasus treba da pise dvadeset i prvog veka
+    \item[--] str. 2, fusnota 1 nedostaje slovo e u interneta
+    \item[--] str. 3, prvi pasus nedostaje slovo a u programskog i refereca treba da bude pre tačke
+    \item[--] str. 3, drugi pasus web treba zameniti veb
+    \item[--] str. 4, prvi pasus, sedmi red ima a više u rezultati 
+    \item[--] str. 4, drugi pasus, treći red nedostaje tačka kod eng u zagradi
+    \item[--] str. 11, Perl napisano malim slovima
+    \item[--] str. 12,[2] i [3] nedostaje online at
+    \item[--] str. 12, [6] ime napisano malim slovima
+    \odgovor{Svestan mogućnosti zabune, sam brian je dao neke smernice oko \href{http://www252.pair.com/comdog/style.html}{zapisa} svog imena. }
+    \item[--] str. 12, [10] višak slovo n u Programming     
+\end{itemize}
+
+Reč k\^{o}d se više puta u radu spominje zbog prirode tematike, i trebalo bi izmeniti svako pojavljivanje da bude sa 'kvačicom', jer je trenutno skoro svuda napisano 'kod'.
+Stilski bi trebalo ujednačiti obraćanje, u nekim delovima je uopšteni govor, dok je u nekim delovima direktno obraćanje čitaocu.
+
+\section{Provera sadržajnosti i forme seminarskog rada}
+
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?\\
+Da, pokrivene su sve ključne stavke koje su tražene. 
+
+\item Da li je nešto važno propušteno?\\
+Nije, sve ključne stvari su spomenute i opisane.
+
+\item Da li ima suštinskih grešaka i propusta?\\
+Nema, sve informacije koje su stavljene su validne.
+
+\item Da li je naslov rada dobro izabran?\\
+Rad pokriva i deo vezan za analitičke probleme, ali fokus rada nije na tome kako je Perl sjajno rešenje za analitičke probleme. Samim tim, možda bi neki drugi naslov bio bolje rešenje, ali svakako ovaj naziv je veoma primamljiv da se dobije želja da se pročita rad.
+
+\item Da li sažetak sadrži prave podatke o radu?\\
+Da, sve što je navedeno u sažetku se nalazi i u samom radu. Takođe sve što je navedeno kao cilj sa čime čitalac treba da se upozna se na kraju saznaje.
+
+\item Da li je rad lak-težak za čitanje?\\
+Rad je uglavnom lak za čitanje, ukoliko postoje određena predznjanja iz oblasti programiranja i računarstva. Kao što je rečeno u primedbama, prvi pasus poglavlja 2 ima nedostatak informacija. I sa trenutnim rasporedom poglavlja ukoliko čitalac nema predzanja iz semantike Perl-a teže je razumeti šta se dešava u k\^{o}dovima.
+
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri?\\
+Potrebno je poznavati osnovne koncepte svih programskih paradigmi koje se pojavljuju, zatim šta su interpretirani jezici, regularni izrazi i ostale osnovne koncepte programiranja.
+
+\item Da li je u radu navedena odgovarajuća literatura?\\
+Literatura koja je navedena je adekvatna, ispunjava se uslov od minimum 7 stavki, od čega postoji po bar jedan sajt, članak i knjiga.
+
+\item Da li su u radu reference korektno navedene?\\
+U samom radu reference su uglavnom korektno navedene. Kao što je u primedbama navedeno na nekoliko mesta je potrebno staviti referencu pre tačke i reference u poglavlju 2 se moraju staviti u literaturu, a ne u zagrade kao što trenutno stoje.
+ 
+\item Da li je struktura rada adekvatna?\\
+Kada se sadržaj i s\^{a}m rad pogledaju struktura je dobra, međutim sa čitljivost i razumevanje poglavlje 8 bi trebalo da ide nakon poglavlja 5.
+
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?\\
+Da, sadrži 12 strana što je maksimalno koliko je dozvoljeno, jednu sliku i jednu tabelu. Ispunjava uslove od minimum 7 stavki u literaturi, i uslove za minimum jedan sajt, članak i knjigu. Sadrži aprstrakt, uvod i zaključak. Odgovara na svih 7 stavki koje treba da sadrži rad vezan za neki programski jezik. Poseduje k\^{o}dove, koji su napisani koristeći deo latex k\^{o}da sa nameštenim programskim jezikom Perl. Vremena u radu se ne mešaju.
+
+\item Da li su slike i tabele funkcionalne i adekvatne?\\
+Tabela je adektvatna i čitljiva, lako se čitaju informacije, ali joj nedostaje naslov. Dok slika kada se oštampa rad nije čitljiva, samo su vidljive linije dok se imena programskih jezika jedva naziru. Takođe ni na sliku, ni na tabelu se ne referiše iz teksta.
+\end{enumerate}
+
+\section{Ocenite sebe}
+
+U oblast koju referišem sam malo upućena iz razloga što se prvi put susrećem sa ovim programskim jezikom, a od dobijanja teme za recenziju do sad, uz ostale obaveze, smatram da nije da nije dovoljno za veća znanja ove oblasti.
+
+\chapter{Recenzent \odgovor{--- ocena:} }
+
+
+\section{O čemu rad govori?}
+% Напишете један кратак пасус у којим ћете својим речима препричати суштину рада (и тиме показати да сте рад пажљиво прочитали и разумели). Обим од 200 до 400 карактера.
+Programski jezik Perl je razvio Leri Vol 1987. godine. Nastao je iz  potrebe za jezikom na kom bi se lakše i bolje pisao softver, a posebno olakšao rad sa tekstualnim datotekama. Kao jezik opšte namene, ubrzo je postao nezamenljiv alat. Našao je veliku primenu u mrežnom programiranju zbog posebnog bezbednog režima rada, programiranju baza podataka, veb programiranju, čak se smatra sastavnim delom interneta. Vremenom je evoluirao sa potrebama industrije. Tako, u ovom, inicijalno proceduralnom jeziku nastalom pod uticajem programskog jezika C, sed i drugih alata, moguće je pisati u objektno-orijentisanom stilu zahvaljujući biblioteci Moose, kao i u funkcionalnom stilu. Njegove najvažnije odlike su bogat skup jednostavnih  funkcija i mehanizama za rad sa datotekama i regularnim izrazima (u odnosu na koje drugi programski jezici mere kvalitet svoje podršku za isto), kao i CPAN, velika internet arhiva koja sadrži oko 180 000 Perl modula. Perl dinamički alocira memoriju, što omogućava pisanje programa otpornijih na greške. Interesantno je da se Perl kod interpretira, ali pre toga se pravi posebno sintaksno stablo. Perl programe odlikuje laka portabilnost na različite platforme. Uticao je na razvoj nekih modernih progamskih jezika (PHP, Rubi). Uprkos velikoj fleksibilnosti, jednostavnoj i prirodnoj sintaksi, velikom broju modula i biblioteka, Perl danas nije među najpopularnijim jezicima. Ipak, deo sve poznatijeg, novog veb pretraživača, DuckDuckGo, napisan je u Perlu. 
+
+\section{Krupne primedbe i sugestije}
+% Напишете своја запажања и конструктивне идеје шта у раду недостаје и шта би требало да се промени-измени-дода-одузме да би рад био квалитетнији.
+U nastavku je izloženo nekoliko konstruktivnih ideja koje bi pomogle autorima da unaprede rad tako da on bude jasniji, precizniji i potpuniji.
+\begin{enumerate}
+\item Na sliku i na tabelu ne postoji referenca u radu, a trebalo bi.
+\item Rečenica na početku 2. poglavlja: "...nijedno od njih ne rešava ovu vrstu problema..." \ - nije jasno koju vrstu problema jer je rečenica na samom početku rada i ništa sem nekih opštih činjenica pre tog momenta nije dato (pomenuti su jedino česti problemi pri razvoju softvera pre ovog mesta, ali to nije ništa egzaktno i ne pomaže da se izložena rečenica razume).
+\item Prva rečenica potpoglavlja 2.1 kaže "Ako u obzir uzmemo činjenicu šta je osnovna namena ovog programskog jezika...", a do tog momenta nije rečeno šta je osnovna namena. Bilo je reči samo o nekim opštim problemima.
+\item Na nekoliko mesta se govori kako je Perl uticao na razvoj nekoliko modernih jezika, ali nigde se ne kaže kako, koji deo, koja ideja Perla, nigde nisu date sitne, ali za čitaoca dovoljne, veze (npr. čitalac upoznat sa PHP-om će konačno razumeti zašto svako ime promenljive mora da počne sa \$, ideja specijalnih globalnih nizova POST i GET, asocijativni nizovi i sl.).
+\item Kada je u pitanju poglavlje "Šta je ono što izdvaja Perl", prvi pasus bi možda bilo bolje staviti u potpoglavlje. Uvod za celo poglavlje bi mogao biti neki tekst koji govori o tome o čemu će detaljnije biti reči u nastavku. Tako je odmah jasna struktura čitavog poglavlja. Sada izgleda kao da je CPAN jedina specifičnost, ali u stvari kasnije postoje potpoglavlja koja govore o nekim drugim specifičnostima posebno. 
+\item Takođe, rečeno je da jezik nije popularan koliko i ranije. Bilo bi dobro potkrepiti ovo tvrđenje  informacijama koji to jezici stoje na Perlovom nekadašnjem pijedestalu i zašto.
+\end{enumerate}
+
+\section{Sitne primedbe}	
+% Напишете своја запажања на тему штампарских-стилских-језичких грешки
+Postoji nekoliko primedbi:
+\begin{enumerate}
+\item Neusaglašenost - Perl-a, Perla\\
+Pri deklinaciji imenice Perl u radu se nekad piše crtica, a nekad ne. Kako je u pitanju reč transkribovana na srpski, može se menjati po padežima bez pisanja crtice. Bilo bi dobro svako pojavljivanje reči Perl sa crticom zameniti u odgovarajući oblik bez crtice (ili zameniti u oblik samo sa crticom - u svakom slučaju, opredeliti se za jedno).
+\odgovor{ Sva pojavljivanja reči Perl sa crticom su zamenjena rečju bez crtice. }
+\item Objektno-orijentisan ponekad napisan sa crticom, ponekad bez\\
+Usaglasiti notaciju u radu.
+\odgovor{ Objektno-orijentisan zamenjeno varijantom bez crtice. }
+\item Slovne greške\\
+Nalaze se na sledećim mestima:\\
+fusnota na 2. strani,
+pretrazivac umesto pretraživač, dotati umesto dodati, korisćenja umesto korišćenja na strani 2,
+progrmskog umesto programskog na strani 3,
+Pythonom umesto Python-om na strani 4,
+nisci umesto niski na strani 6
+\item Nezavršene rečenice\\
+poglavlje 7.3 - nema reference na neko poglavlje, iako je rečeno da će biti.
+\odgovor{ Referenca je popravljena. }
+\item Instaliranje i pokretanje\\
+Naziv čitavog poglavlja je Instaliranje i pokretanje, a onda se u okviru njega prave 4 identična potpoglavlja, razlika je samo u operativnom sistemu. Tako se 4 puta ponavlja ono što je već rečeno u naslovu poglavlja i bespotrebno dele 2 bliske teme (instaliranje, pokretanje) u zasebna potpoglavlja.
+Predlog: napraviti poglavlje Linux i poglavlje Windows u okviru kojih će se objasniti na koji način se Perl kompajler i odgovarajući paketi mogu instalirati. Na taj način neće biti bespotrebnih redundantnosti i priča će prirodnije teći.
+\item Mešanje ličnog (i mešanje 1. i 2. lica množine) i bezličnog oblika u poglavlju Instaliranje i pokretanje\\
+Predlog: opredeliti se za jedan oblik, odnosno jedno lice.
+\end{enumerate}
+
+\section{Provera sadržajnosti i forme seminarskog rada}
+% Oдговорите на следећа питања --- уз сваки одговор дати и образложење
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?\\
+U radu je opisan nastanak i razvoj, opisane su osnovne osobine, specifičnosti, namene, primene i štošta drugo vezano za programski jezik Perl, što je i bila tema seminarskog rada. Nakon čitanja rada, čitalac ima globalnu sliku o Perlu, kao i detaljniji uvid u najznačajnije koncepte i mogućnosti jezika.
+\item Da li je nešto važno propušteno?\\
+Ništa važno nije propušteno. Govorilo se o glavnim namenama Perla, svim paradigmama koje je moguće koristiti, o važnosti Perla u mrežnom i veb programiranju, kako je opšte poznato da je Perl "lepak interneta", kako je on praktično standard za regularne izraze, stoga odličan alat za rad sa niskama, ali i to da dugi niz godina ne uživa popularnost koliku i ranije.
+\item Da li ima suštinskih grešaka i propusta?\\
+U radu nema suštinskih grešaka i propusta, iznete su i objašnjene tačne činjenice, potkrepljene odgovarajućom literaturom.
+\item Da li je naslov rada dobro izabran?\\
+Naslov rada jasno govori o čemu će biti reči. Ali deo naslova "\ sjajno rešenje za analitičke probleme"\ bi mogao koristiti i za rad o nekom drugom programskom jeziku ili tehnologiji jer su analitički problemi, otprilike, svi problemi - sve za šta je neophodna analiza, rad u manjim koracima. Npr. naslov rada o programskom jeziku Pajton (eng.~{\em Python}) bi mogao da bude isti. Kako bi se naslov više vezao za Perl i njegove mogućnosti, predlog je da se iskoristi fraza "lepak interneta", koja maltene identifikuje Perl. Tako, predlog za naslov bi bio "\ Superlepak interneta - Perl".
+\item Da li sažetak sadrži prave podatke o radu?\\
+Sažetak je jezgrovit. Daje uvid u to o čemu će biti reči i iz kog razloga. Ono što privlači pažnju je činjenica da će se govoriti o programskom jeziku koji je uticao na nastanak drugih modernih programskih jezika, da ima posebno jednostavnu sintaksu - dakle, relativno jednostavan za učenje sa te strane, kao i da je izbor mnogih programera.
+\item Da li je rad lak-težak za čitanje?\\
+Rad je jednostavan za čitanje. Tekst je smisleno podeljen na paragrafe, rečenice nisu bespotrebno dugačke, pa tako nije zamorno i obeshrabrujuće čitati rad. Određene važne ideje (npr. Perl ima odličnu podršku za rad sa regularnim izrazima) su se spominjale više puta tokom rada, te je velika verovatnoća da će ih čitalac zapamtiti i da će mu one, ako ništa drugo, ostati u sećanju nakon čitanja, što je pozitivna osobina bilo koje vrste izlaganja.
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri?\\
+Rad je pisan tako da se ne podrazumeva da čitalac zna išta o temi, programskom jeziku Perl, ali je bolje ako je čitalac poznavalac, pa čak i površni, računarstva. Naime, neophodno je znati na šta se misli kad se kaže okruženja (eng.~{\em framework}), primeri koda se mnogo lakše i brže razumeju ukoliko je čitalac imao dodira sa programiranjem, šta su to regularni izrazi i slično.
+\item Da li je u radu navedena odgovarajuća literatura?\\
+Rad je obskrbljen odgovarajućom literaturom. Čine je zvanični veb sajtovi relevantnih udruženja, knjige posvećene temi, od kojih je nekoliko napisao i sam autor Perla.
+\item Da li su u radu reference korektno navedene?\\
+U radu su reference korektno navedene - na odgovarajućim mestima, relevantnom literaturom iz oblasti.
+\item Da li je struktura rada adekvatna?\\
+Priča o Perlu teče smisleno i malo po malo otkriva čitaocu detalje o jeziku. Od razloga i vremena nastanka, preko njegovog mesta u moru programskih jezika, osobina, specifičnosti do primera programskog koda može se razumeti vrednost i značaj Perla.
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?\\
+Rad je u potpunosti ispoštovao propisane uslove seminarskog rada.
+Isti sadrži 12 strana, što je u okviru ograničenja, abstrakt, uvod i zaključak kao neophodna poglavlja, jednu sliku i jednu tabelu, odgovarajuć broj referenci u okviru kojih je ispoštovan uslov da dve od njih moraju biti knjige, da mora postojati link ka relevantnoj veb strani, kao i bar 1 naučni rad. Svaka referenca je bar negde u tekstu poslužila. Naslov, imena autora, sadržaj i abstrakt staju na jednu stranu.
+\item Da li su slike i tabele funkcionalne i adekvatne?\\
+Tabela i slika su vrlo funkcionalne i nalaze se na odgovarajućem mestu. U svega nekoliko redova tabele je data velika količina korisnih informacija. Samo na osnovu nje se može videti šta je to važno što je deo Perla i kako se jezik razvijao tokom godina. Sa druge strane, nije prepunjena informacijama tako da čitalac nema želju da detaljno pročita njen sadržaj. Izgleda kao da vertikalne linije u tabeli nisu neophodne u ovom slučaju. Slika jasno opisuje koji su to programi i jezici uticali na razvoj Perla tokom godina, ali i koji su to poznati i široko korišćeni jezici današnjice na koje je on uticao.  
+\end{enumerate}
+
+\section{Ocenite sebe}
+% Napišite koliko ste upućeni u oblast koju recenzirate: 
+% a) ekspert u datoj oblasti
+% b) veoma upućeni u oblast
+% c) srednje upućeni
+% d) malo upućeni 
+% e) skoro neupućeni
+% f) potpuno neupućeni
+% Obrazložite svoju odluku
+U oblast sam srednje upućena. Kao odličan poznavalac regularnih izraza, svakako da priča o Perlu i tome kako je podrška za regularne izraze skoro, pa potekla od njega, da se meri u odnosu na njegovu, nije mogla da me zaobiđe. Sa iskustvom u programskom jeziku PHP, jednim od, takoreći, Perlovih nastavaka specijalizonim za veb programiranje, imam uvid i u Perlove mogućnosti kada je veb u pitanju, pa čak i u sintaksu i neke konstrukte koje je PHP preuzeo. Stoga, smatram sebe kompetentnom da komentarišem dati rad. Čitajući rad sam naučila mnoge interesantne informacije o jeziku, i one su samo upotpunile moje znanje o Perlu.
+
+\chapter{Recenzent \odgovor{--- ocena:} }
+
+
+\section{O čemu rad govori?}
+% Напишете један кратак пасус у којим ћете својим речима препричати суштину рада (и тиме показати да сте рад пажљиво прочитали и разумели). Обим од 200 до 400 карактера.
+Rad govori o programskom jeziku Perl, opisuje njegov nastanak, razvoj, mogućnosti i primenu, takođe predstavlja neke osnovne naredbe jezika, sintaksu, način izvršavanja programa pisanih u Perl-u, ali i ono što ovaj jezik čini pogodnim za upotrebu.
+\section{Krupne primedbe i sugestije}
+% Напишете своја запажања и конструктивне идеје шта у раду недостаје и шта би требало да се промени-измени-дода-одузме да би рад био квалитетнији.
+\begin{itemize}
+\item Nigde u radu nije navedeno da je Perl slabo tipiziran jezik i da nije potrebno definisati tip promenljive već to odradi interpreter na osnovu njenog sadržaja.
+\item Kod grananja bi trebalo navesti i elsif granu, ali i spomenuti unless naredbu koja je karakteristična za Perl.
+\item Navesti koja je ekstenzija fajla u kom se čuva Perl kod.
+\item Možda bi malo više pažnje trebalo posvetiti uticaju Perl-a na razvoj drugih jezika.
+\end{itemize}
+
+\section{Sitne primedbe}
+% Напишете своја запажања на тему штампарских-стилских-језичких грешки
+\begin{itemize}
+\item Strana 4 - koristi se pojam "preopterećivanje metoda". Možda je bolji termin polomorfizam.
+\item Strana 6 - u opisu koda imamo "(predstavlja referencu na fajl koji smo prethodno otvorili)". Ovde se verovatno misli da \$fh predstavlja referencu na fajl, ali to nije navedeno.
+\item Strana 6 - "Translacija je slična zameni reči, sa tim što ne koristi regularne izraze prilikom pretrage niske". Bilo bi dobro navesti i ovde primer kao i za zamenu.
+\item Strana 6 - U prvom pasusu dela "Podržane paradigme" treba izmeniti korisan u koristan.
+\odgovor{ Ispravljen je zapis reči koristan. }
+\item Strana 9 - "U pozadini se i dalje dešava nešto slično onome opisanom u , ali je programer..." Zarez je klikabilan, a deo rečenice pre njega je nedovršen.
+\odgovor{ Referenca je popravljena. }
+\end{itemize}
+\section{Provera sadržajnosti i forme seminarskog rada}
+% Oдговорите на следећа питања --- уз сваки одговор дати и образложење
+
+\begin{enumerate}
+\item Da li rad dobro odgovara na zadatu temu?\\ 
+Da, rad prolazi kroz sve bitne stavke vezane za programski jezik Perl.
+\item Da li je nešto važno propušteno?\\ 
+Detaljniji opis naredbi i spisak operatora koji postoje u programskom jeziku Perl
+\item Da li ima suštinskih grešaka i propusta?\\ 
+Nema, naveden je razlog nastanka jezika i opisan njegov razvoj, način upotrebe i njegova sintaksa, što je suština ovog rada.
+\item Da li je naslov rada dobro izabran?\\ 
+Jeste, naslov je precizan, koncizan i jasan.
+\item Da li sažetak sadrži prave podatke o radu?\\ 
+Sažetak pruža prave podatke o radu i opisuje njegovu suštinu. 
+\item Da li je rad lak-težak za čitanje?\\ 
+Rad je lak za čitanje, primeri su dobro objašnjeni.
+\item Da li je za razumevanje teksta potrebno predznanje i u kolikoj meri?\\ 
+Potrebno je poznavanje nekih najosnovnijih termina (nasleđivanje, grananje, polimorfizam...)
+\item Da li je u radu navedena odgovarajuća literatura?\\ 
+Da. Literatura odgovara pitanjima koja se obrađuju u ovom radu.
+\item Da li su u radu reference korektno navedene?\\ 
+Da.
+\item Da li je struktura rada adekvatna?\\ 
+U nekim delovima rada se dešava da samo jedna rečenica bude pasus. Na prvoj strani imamo fusnotu 2 koja bi trebalo da bude na drugoj strani.
+\item Da li rad sadrži sve elemente propisane uslovom seminarskog rada (slike, tabele, broj strana...)?\\ 
+Rad sadrži jednu sliku, i sadrži jednu tabelu. 
+\item Da li su slike i tabele funkcionalne i adekvatne?\\ 
+Jesu, mada bi slika jedan mogla malo više da se prokomentariše.
+\end{enumerate}
+
+\section{Ocenite sebe}
+% Napišite koliko ste upućeni u oblast koju recenzirate: 
+% a) ekspert u datoj oblasti
+% b) veoma upućeni u oblast
+% c) srednje upućeni
+% d) malo upućeni 
+% e) skoro neupućeni
+% f) potpuno neupućeni
+% Obrazložite svoju odluku
+Od ponuđenih odgovora, mom znanju iz ove oblasti najviše odgovara "malo upućen", jer nisam imao prilike da kodiram ili analiziram bilo koji kod pisan u Perl-u tako da nemam nikavog praktičnog znanja i iskustva.
+
+
+\chapter{Dodatne izmene}
+%Ovde navedite ukoliko ima izmena koje ste uradili a koje vam recenzenti nisu tražili. 
+
+\end{document}
+ 
